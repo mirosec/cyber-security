@@ -1,6 +1,6 @@
 # h1 CyberScience
 
-## a) Science hunt. Find a review article related to the themes in the course. Detail your process to find and choose the article
+### a) Science hunt. Find a review article related to the themes in the course. Detail your process to find and choose the article
 
 I chose threat modeling for the topic of the article, since it is the starting point for applying cyber security. Bottom of the page in Google scholar search results includes related searches I used for search term ideas.
 
@@ -20,13 +20,17 @@ I chose threat modeling for the topic of the article, since it is the starting p
 This article is a systematic literature review, which is a synthesis of available and up to date research on the topic. 
 
 ## b) Reviewing the review
-#### Key areas being researched
+#### Key areas being researched (research questions)
 >- What are the latest technologies in current threat modeling methodologies?
 >- What features are required to apply threat modeling in the defense industry?
->- Can the latest technologies identified in RQ1 be applied to the defense industry? If not, how should theybe developed to meet the sector’s needs?
+>- Can the latest technologies identified in the first question be applied to the defense industry? If not, how should they be developed to meet the sector’s needs?
 
 #### Widely agreed upon facts
->- 
+>-
+>-
+
+#### Open questions
+
 
 ## References 
 This is the first assignment for the course - https://terokarvinen.com/cyber-security/
