@@ -34,7 +34,9 @@ This article is a systematic literature review, which is a synthesis of availabl
 
 ## References 
 This is the first assignment for the course - https://terokarvinen.com/cyber-security/
+
 Creating this web page - https://terokarvinen.com/2023/create-a-web-page-using-github/
+
 Finding and checking article validity - https://terokarvinen.com/review-article/
 
 https://www.markdownguide.org/basic-syntax/
