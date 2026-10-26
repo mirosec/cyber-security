@@ -23,7 +23,7 @@ This article is a systematic literature review, which is a synthesis of availabl
 >checked JUFO for journal validity https://jfp.csc.fi/jufoportaali
 >IEEE Access is level 1 - basic, which is acceptable in this assignment
 
-## b) Reviewing the review
+### b) Reviewing the review
 #### Key areas being researched (research questions)
 >- What are the latest technologies in current threat modeling methodologies?
 >- What features are required to apply threat modeling in the defense industry?
@@ -41,7 +41,7 @@ I used Gemini AI to explain terms mission-based, TTP and DIEFD (Data, Informatio
 >- How can latest technologies advance threat modeling in the defense industry?
 >- How can AI-driven technologies be incorporated to maximize performance of threat modeling processes?
 
-## c) Threat modeling quickrun. Create two risks and decide what to do with them. Imagine the details. Be brief, but specific.
+### c) Threat modeling quickrun. Create two risks and decide what to do with them. Imagine the details. Be brief, but specific.
 #### Company 
 >Janko's Concrete
 
@@ -62,10 +62,10 @@ I used Gemini AI to explain terms mission-based, TTP and DIEFD (Data, Informatio
 #### What shall we do with the biggest risk (META - mitigate, eliminate, transfer, accept)
 Janko's is lacking expertise in cyber security so they decide to **transfer** the risk by purchasing secure access and data storage from a well-reputed service provider  for their construction project data. 
 
-## d) Bonus - Create email alert for new research articles
+### d) Bonus - Create email alert for new research articles
 There was a surprising lack of threat modeling review articles, so I created an alert for "threat modeling:review article" by clicking Create alert in Google Scholar's bottom of the left side panel.
 
-## e) Install Linux on virtual machine
+### e) Install Linux on virtual machine
 #### VirtualBox for hosting virtual machines
 >- First I downloaded Oracle Virtualbox for Windows Hosts from the official website. 
 >- Installation warned me of missing dependencies (python core package / win32api bindings), but I'll install them later. Otherwise default choices at every step. 
@@ -87,7 +87,7 @@ There was a surprising lack of threat modeling review articles, so I created an 
 >- Default settings on following screens, Finish installation
 >- Checked browser and it works and has an internet connection
 
-## f) Voluntary technical puzzle
+### f) Voluntary technical puzzle, without the use of AI
 #### ==gCh8mclRFIs8GbsVGS
 I am guessing this is a hash of a password or maybe a strong password, but let's pretend I don't know that. 
 >- I copypasted this to notepad to see it's 20 characters long. 
