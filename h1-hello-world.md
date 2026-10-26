@@ -49,7 +49,7 @@ I used Gemini AI to explain terms mission-based, TTP and DIEFD (Data, Informatio
 >data, reputation, business continuity
 
 #### Bad guys - What do they want? How are they going to get it? Why us? (COI - Capability, Opportunity, Intent)
->Ransom kings are targeting construction firms in a recent trend where multiple construction firms were found to have inadequate protection from cyber threats.
+>Extortion Eddies are targeting construction firms for extortion in a recent trend where multiple construction firms were found to have inadequate protection from cyber threats.
 
 #### List risks (only 2 example risks here). Likelyhood x impact = estimated value.
 #### Employee data leak
@@ -62,6 +62,16 @@ I used Gemini AI to explain terms mission-based, TTP and DIEFD (Data, Informatio
 #### What shall we do with the biggest risk (META - mitigate, eliminate, transfer, accept)
 Janko's is lacking expertise in cyber security so they decide to **transfer** the risk by purchasing secure access and data storage from a well-reputed service provider  for their construction project data. 
 
+## D) Bonus - Create email alert for new research articles
+There was a surprising lack of threat modeling review articles, so I created an alert for "threat modeling:review article" by clicking Create alert in Google Scholar's bottom of the left side panel.
+
+## e) Install Linux on virtual machine
+> First I downloaded Oracle Virtualbox for Windows Hosts from the official website. 
+> Installation warned me of missing dependencies (python core package / win32api bindings), but I'll install them later. Otherwise default choices at every step. 
+> Ran Oracle VirtualBox Manager after installation, chose basic mode for now
+> Clicked Configure VirtualBox Manager to work with your computer
+> Default folder was missing so I created Virtualbox VMs folder manually and selected it for default machine folder, clicked ok all other settings default
+> 
 
 ## References 
 This is the first assignment for the course - https://terokarvinen.com/cyber-security/
@@ -70,4 +80,8 @@ Creating this web page - https://terokarvinen.com/2023/create-a-web-page-using-g
 
 Finding and checking article validity - https://terokarvinen.com/review-article/
 
-https://www.markdownguide.org/basic-syntax/
+Page layout and formatting - https://www.markdownguide.org/basic-syntax/
+
+Example inspired by - https://www.constructiondive.com/news/turner-construction-data-breach-ssns-bank-accounts/828454/
+
+Virtual machines - https://www.virtualbox.org/wiki/Downloads
