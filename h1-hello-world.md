@@ -12,6 +12,7 @@ I chose threat modeling for the topic of the article, since it is the starting p
 >Top tier only, 
 >Journals Only, 
 >Since 2025
+>Review articles
 
 >Threat Modeling for the Defense Industry: Past, Present, and Future (2025)
 >Clicked link for pdf 
@@ -19,17 +20,47 @@ I chose threat modeling for the topic of the article, since it is the starting p
 
 This article is a systematic literature review, which is a synthesis of available and up to date research on the topic. 
 
+>checked JUFO for journal validity https://jfp.csc.fi/jufoportaali
+>IEEE Access is level 1 - basic, which is acceptable in this assignment
+
 ## b) Reviewing the review
 #### Key areas being researched (research questions)
 >- What are the latest technologies in current threat modeling methodologies?
 >- What features are required to apply threat modeling in the defense industry?
 >- Can the latest technologies identified in the first question be applied to the defense industry? If not, how should they be developed to meet the sector’s needs?
 
-#### Widely agreed upon facts
->-
->-
+#### Widely agreed upon facts (conclusion and explanation)
+>- Threat modeling methodologies based on automation do not consider larger mission-based (i.e. affecting organizational goals instead of assets) due to patterns used for automation.
+>- Quantitative risk analysis does not illustrate how detailed elements relate to attacker Tactics, Techniques and Procedures (TTP). Threat modeling focusing on probability and and cost fails to show to detailed information about attackers methods. 
+>- The DIEFD and extension of existing attack tree
+methodologies do not address the shortcomings of traditional threat modeling methodologies. Traditional attack trees are manually done and too large and static, combining attack trees with TTP's requires AI to be done effectively.  
+
+I used Gemini AI to explain terms mission-based, TTP and DIEFD (Data, Information, and Energy Flow Diagram) threat modeling, attack tree for information to base my answer on.
 
 #### Open questions
+>- How can latest technologies advance threat modeling in the defense industry?
+>- How can AI-driven technologies be incorporated to maximize performance of threat modeling processes?
+
+## c) Threat modeling quickrun. Create two risks and decide what to do with them. Imagine the details. Be brief, but specific.
+#### Company 
+>Janko's Concrete
+
+#### Crown jewels
+>data, reputation, business continuity
+
+#### Bad guys - What do they want? How are they going to get it? Why us? (COI - Capability, Opportunity, Intent)
+>Ransom kings are targeting construction firms in a recent trend where multiple construction firms were found to have inadequate protection from cyber threats.
+
+#### List risks (only 2 example risks here). Likelyhood x impact = estimated value.
+#### Employee data leak
+> 70% x 2,000,000 € = 1,400,000 €
+
+#### Construction project data leak (Blueprints, secret projects, NDA's, contracts)
+
+> 20% x 10,000,000 € = 2,000,000 €
+
+#### What shall we do with the biggest risk (META - mitigate, eliminate, transfer, accept)
+Janko's is lacking expertise in cyber security so they decide to **transfer** the risk by purchasing secure access and data storage from a well-reputed service provider  for their construction project data. 
 
 
 ## References 
