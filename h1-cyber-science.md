@@ -16,6 +16,7 @@ I chose threat modeling for the topic of the article, since it is the starting p
 >Since 2025
 >Review articles
 
+>**Review article:**
 >Threat Modeling for the Defense Industry: Past, Present, and Future (2025)
 >Clicked link for pdf 
 >https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10921707
@@ -23,7 +24,7 @@ I chose threat modeling for the topic of the article, since it is the starting p
 This article is a systematic literature review, which is a synthesis of available and up to date research on the topic. 
 
 >checked JUFO for journal validity https://jfp.csc.fi/jufoportaali
->IEEE Access is level 1 - basic, which is acceptable in this assignment
+Jufo ID 78297. IEEE Access is level 1 - basic, which is acceptable in this assignment. 
 
 ### b) Reviewing the review
 #### Key areas being researched (research questions)
@@ -37,7 +38,7 @@ This article is a systematic literature review, which is a synthesis of availabl
 >- The DIEFD and extension of existing attack tree
 methodologies do not address the shortcomings of traditional threat modeling methodologies. Traditional attack trees are manually done and too large and static, combining attack trees with TTP's requires AI to be done effectively.  
 
-I used Gemini AI to explain terms mission-based, TTP and DIEFD (Data, Information, and Energy Flow Diagram) threat modeling, attack tree for information to base my answer on.
+I used Gemini AI to explain terms mission-based, TTP and DIEFD (Data, Information, and Energy Flow Diagram) threat modeling, attack tree for information to base my answer on. Prompt is "What is XYZ?"
 
 #### Open questions
 >- How can latest technologies advance threat modeling in the defense industry?
@@ -48,10 +49,11 @@ I used Gemini AI to explain terms mission-based, TTP and DIEFD (Data, Informatio
 >Janko's Concrete
 
 #### Crown jewels
->data, reputation, business continuity
+>data is the main target for extortion, but reputation and business continuity are collateral damage.
 
 #### Bad guys - What do they want? How are they going to get it? Why us? (COI - Capability, Opportunity, Intent)
->Extortion Eddies are targeting construction firms for extortion in a recent trend where multiple construction firms were found to have inadequate protection from cyber threats.
+>Extortion Eddies are targeting construction firms for extortion in a recent trend where multiple construction firms were found to have inadequate protection from cyber threats. They are going to steal data and ransom it both by encrypting and threatening to publish it.
+>Main method is voice phishing (vishing) in which the attackers pose as IT helpdesk staff to facilitate urgent security migrations. Attackers lure employees to spoofed login portals where they intercept credentials and MFA tokens. 
 
 #### List risks (only 2 example risks here). Likelyhood x impact = estimated value.
 #### Employee data leak
@@ -62,7 +64,8 @@ I used Gemini AI to explain terms mission-based, TTP and DIEFD (Data, Informatio
 > 20% x 10,000,000 € = 2,000,000 €
 
 #### What shall we do with the biggest risk (META - mitigate, eliminate, transfer, accept)
-Janko's is lacking expertise in cyber security so they decide to **transfer** the risk by purchasing secure access and data storage from a well-reputed service provider  for their construction project data. 
+>Janko's is lacking expertise in cyber security so they decide to **transfer** the risk by purchasing improved secure access (e.g. role-based access) and data storage from a well-reputed service provider for their construction project data. 
+>Employees will be trained to spot phishing attempts to **mitigate** further breaches.
 
 ### d) Bonus - Create email alert for new research articles
 There was a surprising lack of threat modeling review articles, so I created an alert for "threat modeling:review article" by clicking Create alert in Google Scholar's bottom of the left side panel.
@@ -70,8 +73,8 @@ There was a surprising lack of threat modeling review articles, so I created an 
 ### e) Install Linux on virtual machine
 I'll try to be as detailed as possible within reason, so that someone with little knowledge could follow the instructions and do the same. 
 #### VirtualBox for hosting virtual machines
->- First I downloaded Oracle Virtualbox for Windows Hosts from the official website. 
->- Installation warned me of missing dependencies (python core package / win32api bindings), but I'll install them later. Otherwise default choices at every step. 
+>- First I downloaded Oracle Virtualbox for Windows Hosts from the official website, as suggested in course materials. 
+>- Installation warned me of missing dependencies (python core package / win32api bindings), but I'll install them later, if needed. Otherwise default choices at every step. 
 >- Ran Oracle VirtualBox Manager after installation, chose basic mode for now
 >- Clicked Configure VirtualBox Manager to work with your computer
 >- Default folder was missing so I created Virtualbox VMs folder manually and selected it for default machine folder, clicked ok all other settings default
@@ -109,9 +112,13 @@ Let's try installing hashcat on debian linux and see what happens if we give it 
 >- **VM terminal:** hashcat
 >- **VM terminal:** hashcat --help
 
-Looks like we have to specify the attack type, hash type (autodetect might work) and then save the **==gCh8mclRFIs8GbsVGS** as a file on the VM for hashcat to work, can't just copypaste it directly to the terminal. Copypasting from host PC to VM doesn't work without changing settings and restarting the VM, but thankfully internet works on the VM so I can just get the hash from the course website. First let's see what folder I am in.
+Looks like we have to specify the attack type, hash type (autodetect might work) and then save the **==gCh8mclRFIs8GbsVGS** as a file on the VM for hashcat to work, since you can't just copypaste it directly to the terminal. 
+
+Copypasting from host PC to VM doesn't work without changing settings and restarting the VM, but thankfully internet works on the VM so I can just get the hash from the course website. First let's see what folder I am in.
+
 >- **VM terminal:** pwd
 >- /home/miro
+
 Now to open a new text file with nano and paste **==gCh8mclRFIs8GbsVGS** I copied from the course website using the browser in the VM.
 >- **VM terminal:** nano
 >- Then ctrl + shift + v to paste the puzzle. Ctrl + X to exit and save, name file to **puzzle.txt**
@@ -125,10 +132,10 @@ Now to open a new text file with nano and paste **==gCh8mclRFIs8GbsVGS** I copie
 >- **24100	MongoDB ServerKey SCRAM-SHA-1	$mongodb-scram$*0*dXNlcg==*10000*4p+f1tKpK18hQqrVr0UGOw==*Jv9lrpUQ2bVg2ZkXvRm2rppsqNw=**
 >- I tried different hashcat commands with the hash modifier -m 24100 and 24200, but didn't get any results. Also tried -a modifiers between 0-3 with no results.
 
-This is getting too complicated, time to go back to the drawing board and look at this problem differently.
+This is getting too complicated. I think the solution is probably something simpler. time to go back to the drawing board and look at this problem differently.
 
 #### Trying other methods
-I'm tempted to just google "what hash starts with ==", but I'm not sure if it would ruin the puzzle. I think I've made the classic mistake of assuming too much at the beginning. Maybe this isn't a hash, but some other type of encryption, so I searched **how to identify type of encryption.**
+I'm tempted to just google "what hash starts with ==", but I'm not sure if it would ruin the puzzle. I think I've made the classic mistake of assuming too much at the beginning. Maybe this isn't a hash, but some other type of encryption, so I searched google for **how to identify type of encryption.**
 >- I found https://www.boxentriq.com/analysis/cipher-identifier and it says the puzzle is 100% base85.
 >- Google base85 decoder linux
 >- Tried using basenc -d --z85 puzzle.txt but it returned complete gibberish with random ??? icons
@@ -137,7 +144,7 @@ I'm tempted to just google "what hash starts with ==", but I'm not sure if it wo
 >- I also tried https://www.boxentriq.com/encodings/base85-decoder, but that also just returned complete gibberish
 >- Google how to identify base85
 
-The search AI overview said: "Unlike Base64—which encodes 3 bytes into 4 characters (plus = or == padding)—Base85 encodes 4 bytes of binary data into 5 ASCII characters". So maybe the online tool scammed me and this is base64 instead.
+The search AI overview said: "Unlike Base64—which encodes 3 bytes into 4 characters (plus = or == padding)—Base85 encodes 4 bytes of binary data into 5 ASCII characters". So maybe the online tool scammed me and this is base64 instead. The puzzle does have double equal signs. 
 
 >- https://www.boxentriq.com/encodings/base64-decoder
 >- Invalid Base64 input for the selected format.
