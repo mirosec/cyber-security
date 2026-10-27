@@ -142,10 +142,12 @@ I'm tempted to just google "what hash starts with ==", but I'm not sure if it wo
 >- I found https://www.boxentriq.com/analysis/cipher-identifier and it says the puzzle is 100% base85.
 >- Google base85 decoder linux
 >- Tried using basenc -d --z85 puzzle.txt but it returned complete gibberish with random ??? icons
->- To paste the output to my host PC: Shutdown VM -> VM Settings -> general -> Shared clipboard -> bidirectional
+>
+I should have enabled shared clipboard between host PC and virtual machine earlier, but I'll just have to do it now.
+>- To paste the output to my host PC: Shutdown VM -> Virtualbox Manager -> VM Settings -> general -> Shared clipboard -> bidirectional
 >- Strangely the weird icons just paste as the original puzzle text on my host PC **==gCh8mclRFIs8GbsVGS**
 >- I also tried https://www.boxentriq.com/encodings/base85-decoder, but that also just returned complete gibberish
->- Google how to identify base85
+>- Google **how to identify base85**
 
 The search AI overview said: "Unlike Base64—which encodes 3 bytes into 4 characters (plus = or == padding)—Base85 encodes 4 bytes of binary data into 5 ASCII characters". So maybe the online tool scammed me and this is base64 instead. The puzzle does have double equal signs. 
 
@@ -155,7 +157,7 @@ The search AI overview said: "Unlike Base64—which encodes 3 bytes into 4 chara
 
 Could the assignment be devious enough to have actually reversed the encoding?
 
->- Google how to reverse text with linux
+>- Google how to reverse text with linux and how to decode base64 linux
 >- **VM terminal:** echo "==gCh8mclRFIs8GbsVGS" | rev
 >- **VM terminal:** echo "SGVsbG8sIFRlcm8hCg==" | base64 -d
 >- **VM terminal:** Hello, Tero!
