@@ -135,7 +135,7 @@ Now to open a new text file with nano and paste **==gCh8mclRFIs8GbsVGS** I copie
 >- **24100	MongoDB ServerKey SCRAM-SHA-1	$mongodb-scram$*0*dXNlcg==*10000*4p+f1tKpK18hQqrVr0UGOw==*Jv9lrpUQ2bVg2ZkXvRm2rppsqNw=**
 >- I tried different hashcat commands with the hash modifier -m 24100 and 24200, but didn't get any results. Also tried -a modifiers between 0-3 with no results.
 
-This is getting too complicated. I think the solution is probably something simpler. time to go back to the drawing board and look at this problem differently.
+This is getting too complicated. I think the solution is probably something simpler. Time to go back to the drawing board and look at this problem differently.
 
 #### Trying other methods
 I'm tempted to just google "what hash starts with ==", but I'm not sure if it would ruin the puzzle. I think I've made the classic mistake of assuming too much at the beginning. Maybe this isn't a hash, but some other type of encryption, so I searched google for **how to identify type of encryption.**
