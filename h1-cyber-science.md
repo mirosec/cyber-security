@@ -16,9 +16,9 @@ I chose threat modeling for the topic of the article, since it is the starting p
 >Since 2025
 >Review articles
 
->**Review article:**
->Threat Modeling for the Defense Industry: Past, Present, and Future (2025)
->Clicked link for pdf 
+>**Review article: Threat Modeling for the Defense Industry: Past, Present, and Future (2025)**
+>
+>Clicked link for pdf on google scholar
 >https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10921707
 
 This article is a systematic literature review, which is a synthesis of available and up to date research on the topic. 
@@ -49,10 +49,11 @@ I used Gemini AI to explain terms mission-based, TTP and DIEFD (Data, Informatio
 >Janko's Concrete
 
 #### Crown jewels
->data is the main target for extortion, but reputation and business continuity are collateral damage.
+>**data** is the main target for extortion, but reputation and business continuity are collateral damage.
 
 #### Bad guys - What do they want? How are they going to get it? Why us? (COI - Capability, Opportunity, Intent)
 >Extortion Eddies are targeting construction firms for extortion in a recent trend where multiple construction firms were found to have inadequate protection from cyber threats. They are going to steal data and ransom it both by encrypting and threatening to publish it.
+>
 >Main method is voice phishing (vishing) in which the attackers pose as IT helpdesk staff to facilitate urgent security migrations. Attackers lure employees to spoofed login portals where they intercept credentials and MFA tokens. 
 
 #### List risks (only 2 example risks here). Likelyhood x impact = estimated value.
@@ -64,7 +65,8 @@ I used Gemini AI to explain terms mission-based, TTP and DIEFD (Data, Informatio
 > 20% x 10,000,000 € = 2,000,000 €
 
 #### What shall we do with the biggest risk (META - mitigate, eliminate, transfer, accept)
->Janko's is lacking expertise in cyber security so they decide to **transfer** the risk by purchasing improved secure access (e.g. role-based access) and data storage from a well-reputed service provider for their construction project data. 
+>Janko's is lacking expertise in cyber security so they decide to **transfer** the risk by purchasing improved secure access (e.g. role-based access), security consulting and data storage from a well-reputed service provider for their construction project data.
+>
 >Employees will be trained to spot phishing attempts to **mitigate** further breaches.
 
 ### d) Bonus - Create email alert for new research articles
@@ -91,11 +93,11 @@ I'll try to be as detailed as possible within reason, so that someone with littl
 >- Partition disk -  Guided - use entire disk, default settings on following screens
 >- write changes to disk: yes, additional packages: no, network mirror:yes, proxy:no
 >- Default settings on following screens, Finish installation
->- Checked browser and it works and has an internet connection
+>- To check internet connectivity, I opened firefox browser went to terokarvinen.com successfully
 
 ### f) Voluntary technical puzzle, without the use of AI
 #### ==gCh8mclRFIs8GbsVGS
-I am guessing this is a hash of a password or maybe a strong password, but let's pretend I don't know that. 
+I am guessing this is a hash of a password or maybe a strong password based on my knowledge, but let's pretend I haven no idea what the puzzle could be.  
 >- I copypasted this to notepad to see it's 20 characters long. 
 >- Googled: what is 20 random characters cyber security
 >- Found site: https://createpassword.in/blog/12-vs-16-vs-20-character-password-length-guide
@@ -103,10 +105,11 @@ I am guessing this is a hash of a password or maybe a strong password, but let's
 >- Site mentions **hashcat** or **john the ripper** as popular software to crack passwords
 #### Installing hashcat
 Let's try installing hashcat on debian linux and see what happens if we give it the puzzle, google How to install hashcat on linux
+>- Open Terminal from the debian applications menu on the Virtual Machine created earlier
 >- **VM machine terminal:** sudo apt install hashcat
->- Didn't work, system is asking for Media change insert disc, after googling the error it seems installation is attempted locally instead of online. Followed instruction on Google AI Overview to remove cd-rom from installation source list using terminal
+>- Didn't work, system is asking for **Media change insert disc**, after googling the error it seems installation is attempted locally instead of online. Followed instruction on Google AI Overview to remove cd-rom from installation source list using terminal
 >- **VM terminal:** sudo nano /etc/apt/sources.list
->- used # to comment out the **deb cdrom:** on the first line, then pressed ctrl+x, yes to save
+>- used # to comment out the **deb cdrom:** on the first line, then pressed ctrl+x to exit, yes to save
 >- **VM terminal:** sudo apt install haschat -> this time installation works
 #### Using hashcat
 >- **VM terminal:** hashcat
