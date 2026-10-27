@@ -103,9 +103,10 @@ Let's try installing hashcat on debian linux and see what happens if we give it 
 >- **VM terminal:** sudo nano /etc/apt/sources.list
 >- used # to comment out the **deb cdrom:** on the first line, then pressed ctrl+x, yes to save
 >- **VM terminal:** sudo apt install haschat -> this time installation works
-##### Using hashcat
+#### Using hashcat
 >- **VM terminal:** hashcat
 >- **VM terminal:** hashcat --help
+
 Looks like we have to specify the attack type, hash type (autodetect might work) and then save the **==gCh8mclRFIs8GbsVGS** as a file on the VM for hashcat to work, can't just copypaste it directly to the terminal. Copypasting from host PC to VM doesn't work without changing settings and restarting the VM, but thankfully internet works on the VM so I can just get the hash from the course website. First let's see what folder I am in.
 >- **VM terminal:** pwd
 >- /home/miro
@@ -120,8 +121,10 @@ Now to open a new text file with nano and paste **==gCh8mclRFIs8GbsVGS** I copie
 >- https://hashes.com/en/tools/hash_identifier tried this but it couldn't identify
 >- https://hashcat.net/wiki/doku.php?id=example_hashes looked manually at this list and couldn't find a match, but there are some hashes that look similar with the double == marks
 >- **24100	MongoDB ServerKey SCRAM-SHA-1	$mongodb-scram$*0*dXNlcg==*10000*4p+f1tKpK18hQqrVr0UGOw==*Jv9lrpUQ2bVg2ZkXvRm2rppsqNw=**
->- I tried different hashcat commands with the hash modifier -m 24100 and 24200, but didn't get any results. Also tried -a modifiers between 0-3 with no results. 
-##### Other methods
+>- I tried different hashcat commands with the hash modifier -m 24100 and 24200, but didn't get any results. Also tried -a modifiers between 0-3 with no results.
+This is getting too complicated, time to go back to the drawing board and look at this problem differently.
+
+#### Trying other methods
 I'm tempted to just google "what hash starts with ==", but I'm not sure if it would ruin the puzzle. I think I've made the classic mistake of assuming too much at the beginning. Maybe this isn't a hash, but some other type of encryption, so I searched **how to identify type of encryption.**
 >- I found https://www.boxentriq.com/analysis/cipher-identifier and it says the puzzle is 100% base85.
 >- Google base85 decoder linux
@@ -130,8 +133,22 @@ I'm tempted to just google "what hash starts with ==", but I'm not sure if it wo
 >- Strangely the weird icons just paste as the original puzzle text on my host PC **==gCh8mclRFIs8GbsVGS**
 >- I also tried https://www.boxentriq.com/encodings/base85-decoder, but that also just returned complete gibberish
 >- Google how to identify base85
-The search AI overview said: "Unlike Base64—which encodes 3 bytes into 4 characters (plus = or == padding)—Base85 encodes 4 bytes of binary data into 5 ASCII characters".  
->- 
+
+The search AI overview said: "Unlike Base64—which encodes 3 bytes into 4 characters (plus = or == padding)—Base85 encodes 4 bytes of binary data into 5 ASCII characters". So maybe the online tool scammed me and this is base64 instead.
+
+>- https://www.boxentriq.com/encodings/base64-decoder
+>- Invalid Base64 input for the selected format.
+>- Google how to identify base64 -> Only upper and lower case letters, numbers 0-9, multiple of 4 characters, ends with one or two = signs
+
+Could the assignment be devious enough to have actually reversed the encoding?
+
+>- Google how to reverse text with linux
+>- **VM terminal:** echo "==gCh8mclRFIs8GbsVGS" | rev
+>- **VM terminal:** echo "SGVsbG8sIFRlcm8hCg==" | base64 -d
+>- **VM terminal:** Hello, Tero!
+
+We finally got the answer! The puzzle was in reversed base64 encoding. 
+
 
 ## References 
 This is the first assignment for the course - https://terokarvinen.com/cyber-security/
