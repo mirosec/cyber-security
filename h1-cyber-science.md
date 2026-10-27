@@ -1,5 +1,7 @@
 # h1 CyberScience
 
+This is the first assignment for the course - https://terokarvinen.com/cyber-security/
+
 ### a) Science hunt. Find a review article related to the themes in the course. Detail your process to find and choose the article
 
 I chose threat modeling for the topic of the article, since it is the starting point for applying cyber security. Bottom of the page in Google scholar search results includes related searches I used for search term ideas.
@@ -96,7 +98,7 @@ I am guessing this is a hash of a password or maybe a strong password, but let's
 >- Found site: https://createpassword.in/blog/12-vs-16-vs-20-character-password-length-guide
 >- 20 character password would be the best option for root/admin passwords
 >- Site mentions **hashcat** or **john the ripper** as popular software to crack passwords
-##### Installing hashcat
+#### Installing hashcat
 Let's try installing hashcat on debian linux and see what happens if we give it the puzzle, google How to install hashcat on linux
 >- **VM machine terminal:** sudo apt install hashcat
 >- Didn't work, system is asking for Media change insert disc, after googling the error it seems installation is attempted locally instead of online. Followed instruction on Google AI Overview to remove cd-rom from installation source list using terminal
@@ -122,6 +124,7 @@ Now to open a new text file with nano and paste **==gCh8mclRFIs8GbsVGS** I copie
 >- https://hashcat.net/wiki/doku.php?id=example_hashes looked manually at this list and couldn't find a match, but there are some hashes that look similar with the double == marks
 >- **24100	MongoDB ServerKey SCRAM-SHA-1	$mongodb-scram$*0*dXNlcg==*10000*4p+f1tKpK18hQqrVr0UGOw==*Jv9lrpUQ2bVg2ZkXvRm2rppsqNw=**
 >- I tried different hashcat commands with the hash modifier -m 24100 and 24200, but didn't get any results. Also tried -a modifiers between 0-3 with no results.
+
 This is getting too complicated, time to go back to the drawing board and look at this problem differently.
 
 #### Trying other methods
@@ -162,3 +165,5 @@ Page layout and formatting - https://www.markdownguide.org/basic-syntax/
 Example inspired by - https://www.constructiondive.com/news/turner-construction-data-breach-ssns-bank-accounts/828454/
 
 Virtual machines - https://www.virtualbox.org/wiki/Downloads
+
+Debian Linux - https://www.debian.org/distrib/
