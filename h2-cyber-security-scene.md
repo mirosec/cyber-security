@@ -1,4 +1,7 @@
 # h2) Cyber security scene
+
+This is the second assignment for the course - https://terokarvinen.com/cyber-security/
+
 ## h2 Scene 
 Cyber moves fast. Here, you'll start following the scene.
 
