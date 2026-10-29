@@ -70,7 +70,10 @@ I used Gemini AI to explain terms mission-based, TTP and DIEFD (Data, Informatio
 >Employees will be trained to spot phishing attempts to **mitigate** further breaches.
 
 ### d) Bonus - Create email alert for new research articles
-There was a surprising lack of threat modeling review articles, so I created an alert for "threat modeling:review article" by clicking Create alert in Google Scholar's bottom of the left side panel.
+There was a surprising lack of threat modeling review articles, so I created an alert for "threat modeling:review article" by clicking Create alert in Google Scholar's bottom of the left side panel. 
+
+**Later update:** Be careful! After creating the email alert I soon started receiving suspicious spam mail from dubious updates@academia-mail.com telling me to Please save this PDF. The spam mail was very vague "here is an article on network security, please open and save it immediately". 
+
 
 ### e) Install Linux on virtual machine
 I'll try to be as detailed as possible within reason, so that someone with little knowledge could follow the instructions and do the same. 
@@ -141,7 +144,9 @@ This is getting too complicated. I think the solution is probably something simp
 I'm tempted to just google "what hash starts with ==", but I'm not sure if it would ruin the puzzle. I think I've made the classic mistake of assuming too much at the beginning. Maybe this isn't a hash, but some other type of encryption, so I searched google for **how to identify type of encryption.**
 >- I found https://www.boxentriq.com/analysis/cipher-identifier and it says the puzzle is 100% base85.
 >- Google base85 decoder linux
->- Tried using basenc -d --z85 puzzle.txt but it returned complete gibberish with random ??? icons
+>- Tried using the following command
+>- **VM terminal:** basenc -d --z85 puzzle.txt
+>- but it returned complete gibberish with random ??? icons
 >
 I should have enabled shared clipboard between host PC and virtual machine earlier, but I'll just have to do it now.
 >- To paste the output to my host PC: Shutdown VM -> Virtualbox Manager -> VM Settings -> general -> Shared clipboard -> bidirectional
@@ -149,7 +154,9 @@ I should have enabled shared clipboard between host PC and virtual machine earli
 >- I also tried https://www.boxentriq.com/encodings/base85-decoder, but that also just returned complete gibberish
 >- Google **how to identify base85**
 
-The search AI overview said: "Unlike Base64—which encodes 3 bytes into 4 characters (plus = or == padding)—Base85 encodes 4 bytes of binary data into 5 ASCII characters". So maybe the online tool scammed me and this is base64 instead. The puzzle does have double equal signs. 
+The search AI overview said: "Unlike Base64—which encodes 3 bytes into 4 characters (plus = or == padding)—Base85 encodes 4 bytes of binary data into 5 ASCII characters". 
+
+So maybe the online tool scammed me and this is base64 instead. The puzzle does have double equal signs. 
 
 >- https://www.boxentriq.com/encodings/base64-decoder
 >- Invalid Base64 input for the selected format.
