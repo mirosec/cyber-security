@@ -27,5 +27,7 @@ Go to Debian.org. On the Other downloads, under heading "Try Debian live before 
 (Mac users: The linked image is for regular PC's, also known as amd64. If you have an M1, M2, M3, M4... Mac, it uses arm64 processor architecture, and you need to figure it out yourself. I suggest using UTM.)
 
 e) Voluntary bonus: Install Debian 13-Trixie Linux on a virtual machine. (Everyone will do this later on the class.)
+
 f) Voluntary bonus: Install a feed reader and follow some RSS / Atom feeds. (If time permits, everyone will do a version of this later.)
+
 g) Voluntary bonus: Read more blog posts and listen to podcasts. Link those news into larger theory framework, citing relevan articles.
