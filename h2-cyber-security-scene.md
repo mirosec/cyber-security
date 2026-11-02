@@ -14,6 +14,20 @@ Covert Access Team podcast, or
 SANS Stromcast podcast, or
 Helsec w44 Thu 18:00 livestream, one presentation (or physically there, if you got a ticket)
 
+### Darknet Diaries - Ricky
+
+This episode told the story of a Rick's journey into the world of cybercrime and how it affected his life. 
+
+**The beginning: Cheating in competitive video games**
+
+Ricky's first touch with cyber attacks was through video games. He was a high schooler who enjoyed competing in sports and video games.  He had success in the game _Halo 3_ and climbed up the rankings, but eventually hit a wall when he was constantly being disconnected during his matches which caused him to lose to players worse than him. He wanted revenge an so he went on forums on the internet and researched what had been done to him.
+
+> **How the attack was done**
+> 
+> The cheaters would first use a legitimate password recovery tool made for windows called _Cain % Abel_, this tool would be used to sniff network packets during a match to find out the target's IP address. Once the address was found, the attacker would use another tool to flood the target IP with network traffic and cause the target to to disconnect. 
+
+
+
 b) Blog. Read one article in one of these blogs (Note: yes, just one, single post out of all of these. More is a voluntary bonus task.)
 Schneier on Security (author of the book "Applied Cryptography"), Atom feed, or
 Krebs on Security, or
