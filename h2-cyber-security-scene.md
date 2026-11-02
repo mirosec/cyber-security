@@ -4,7 +4,7 @@ This is the second assignment for the course - https://terokarvinen.com/cyber-se
 
 Read/watch/listen and summarize cyber security **a)** podcast and **b)** blog, **c)** Link a science article to either one. 
 
-### Darknet Diaries - Ricky - https://darknetdiaries.com/episode/181/
+### a) Darknet Diaries - Ricky - https://darknetdiaries.com/episode/181/
 
 This episode told the story of a Rick's journey into the world of cybercrime beginning from the late 2000's and how it affected his life. A key point in the story is that cyber attacks do not necessarily require technical expertise, someone with simple audacity and ability to lie can cause serious harm.
 
