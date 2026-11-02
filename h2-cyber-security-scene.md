@@ -2,21 +2,11 @@
 
 This is the second assignment for the course - https://terokarvinen.com/cyber-security/
 
-## h2 Scene 
-Cyber moves fast. Here, you'll start following the scene.
+Read/watch/listen and summarize cyber security **a)** podcast and **b)** blog, **c)** Link a science article to either one. 
 
-Read/watch/listen and summarize (These subtasks a, b and c do not require tests with a computer. Some bullets per article is enough for your summary, feel free to write more if you like. Add a bullet for your own idea or question.)
+### Darknet Diaries - Ricky - https://darknetdiaries.com/episode/181/
 
-a) Podcast. Listen and summarize one episode of one the following (Note: yes, just one, single episode out of all of these. More is a voluntary bonus task.)
-Darknet Diaries podcast, or
-Herrasmieshakkerit podcast (in Finnish, but your summary must be in English), or
-Covert Access Team podcast, or
-SANS Stromcast podcast, or
-Helsec w44 Thu 18:00 livestream, one presentation (or physically there, if you got a ticket)
-
-### Darknet Diaries - Ricky
-
-This episode told the story of a Rick's journey into the world of cybercrime beginning from the late 2000's and how it affected his life. 
+This episode told the story of a Rick's journey into the world of cybercrime beginning from the late 2000's and how it affected his life. A key point in the story is that cyber attacks do not necessarily require technical expertise, someone with simple audacity and ability to lie can cause serious harm.
 
 **The beginning: Cheating in competitive video games**
 
@@ -47,8 +37,23 @@ Ricky would eventually start monetizing his crimes by selling stolen usernames o
 
 **Escalating into more serious cybercrimes**
 
-At this point Ricky had been hacking and stealing usernames for about a decade. Account security was improving and the older methods were not as effective anymore. Ricky's criminal colleagues introduced him to SIM-swapping, which they use to transfer the victim's mobile phone number to the attackers phone. Using the stolen phone number Ricky would reset the victims email password and log in. The mailboxes would be searched for any indication of crypto wallets (crypto exchanges, cold wallet phrases etc.), the goal was to gain access to the crypto wallet and steal everything in it. 
+At this point Ricky had been hacking and stealing usernames for about a decade. Account security was improving and the older methods were not as effective anymore. Ricky's criminal colleagues introduced him to SIM-swapping, which they use to transfer the victim's mobile phone number to the attackers phone. 
 
+Using the stolen phone number Ricky would reset the victims email password and log in. The mailboxes would be searched for any indication of crypto wallets (crypto exchanges, cold wallet phrases etc.), the goal was to gain access to the crypto wallet and steal everything in it. This was highly effective and Ricky's criminal group managed to steal millions of dollars worth of bitcoin from multiple victims with these relatively simple and quick attacks. 
+
+The episode included a victim's perspective in Mark's story when he got SIM-swapped. Mark had known of these attacks and prepared beforehand by having instructions on his mobile carrier account, that SIM-swaps require two types of identification and can only be done on-site at a store. Unfortunately an employee had been bribed to be part of the attack and Mark's safety procedures were simply ignored. The employee allowed the attacker to swap his SIM, which lead to Mark's Coinbase account being stolen. 
+
+> **How the attack was done: Social engineering and SIM-swapping**
+>
+> 1. The main goal of the attacker was to get the target's mobile phone number. First the attacker gathers basic information on the target, like a name or email address.  
+> 2. The attacker contacts customer support of large platforms like Amazon, PayPal or ebay posing as the target account owner, and tricks the support to reveal key information such as the mobile phone number. In preparation for the carrier security checks, the attacker would gain more information such as target addresses and social security numbers from public background-check services. 
+> 3. Finally the attacker would use all the gathered information to contact the mobile carrier and SIM-swap the target's phone number into a SIM card inside the attackers burner phone. This would of course disable the victims SIM card on their phone leaving them helpless, while the attacker used the stolen phone number to break into the victim's email account.
+
+**Downfall & aftermath**
+
+Ricky had to launder the stolen bitcoins through local buyers a few thousand dollars at a time. He used the stolen money to fund expensive and lavish vehicles while lying to his family that he got the money through crypto investments. Eventually a member of Ricky's criminal group was arrested and the law enforcement leveraged that arrest into catching the rest of the group. Ricky was sentenced to 4 years in prison and ordered to pay 7.6 million USD in restitution. These days Ricky uses his past experience to speak at cyber security events and is working on building a cybersecurity company. Ricky emphasises the importance of guiding young hackers to use their abilities to prevent cybercrimes rather than commit them.
+
+--------
 
 b) Blog. Read one article in one of these blogs (Note: yes, just one, single post out of all of these. More is a voluntary bonus task.)
 Schneier on Security (author of the book "Applied Cryptography"), Atom feed, or
@@ -73,7 +78,7 @@ g) Voluntary bonus: Read more blog posts and listen to podcasts. Link those news
 
 ## References
 
-https://darknetdiaries.com/transcript/181/
+Podcast episode - https://darknetdiaries.com/episode/181/
 
 Cain & Abel - https://en.wikipedia.org/wiki/Cain_and_Abel_(software)
 
