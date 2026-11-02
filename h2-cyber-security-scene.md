@@ -51,7 +51,9 @@ The episode included a victim's perspective in Mark's story when he got SIM-swap
 
 **Downfall & aftermath**
 
-Ricky had to launder the stolen bitcoins through local buyers a few thousand dollars at a time. He used the stolen money to fund expensive and lavish vehicles while lying to his family that he got the money through crypto investments. Eventually a member of Ricky's criminal group was arrested and the law enforcement leveraged that arrest into catching the rest of the group. Ricky was sentenced to 4 years in prison and ordered to pay 7.6 million USD in restitution. These days Ricky uses his past experience to speak at cyber security events and is working on building a cybersecurity company. Ricky emphasises the importance of guiding young hackers to use their abilities to prevent cybercrimes rather than commit them.
+Ricky had to launder the stolen bitcoins through local buyers a few thousand dollars at a time. He used the stolen money to fund expensive and lavish vehicles while lying to his family that he got the money through crypto investments. Eventually a member of Ricky's criminal group was arrested and the law enforcement leveraged that arrest into catching the rest of the group. Ricky was sentenced to 4 years in prison and ordered to pay 7.6 million USD in restitution. 
+
+These days Ricky uses his past experience to speak at cyber security events and is working on building a cybersecurity company. Ricky emphasises the importance of guiding young hackers to use their abilities to prevent cybercrimes rather than commit them.
 
 --------
 
