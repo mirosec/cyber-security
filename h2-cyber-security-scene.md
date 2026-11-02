@@ -20,11 +20,18 @@ This episode told the story of a Rick's journey into the world of cybercrime and
 
 **The beginning: Cheating in competitive video games**
 
-Ricky's first touch with cyber attacks was through video games. He was a high schooler who enjoyed competing in sports and video games.  He had success in the game _Halo 3_ and climbed up the rankings, but eventually hit a wall when he was constantly being disconnected during his matches which caused him to lose to players worse than him. He wanted revenge an so he went on forums on the internet and researched what had been done to him.
+Ricky's first touch with cyber attacks was through video games. He was a high schooler who enjoyed competing in sports and video games. He had success in the game _Halo 3_ and climbed up the rankings, but eventually hit a wall when he was constantly being disconnected during his matches which caused him to lose to players worse than him. He wanted revenge an so he went on forums on the internet and researched what had been done to him. Ricky wanted easy victories and didn't care he was stooping to the level of the cheaters.
 
-> **How the attack was done**
+> **How the attack was done: Packet sniffing and denial of service**
 > 
-> The cheaters would first use a legitimate password recovery tool made for windows called _Cain % Abel_, this tool would be used to sniff network packets during a match to find out the target's IP address. Once the address was found, the attacker would use another tool to flood the target IP with network traffic and cause the target to to disconnect. 
+> The cheaters would first use a legitimate password recovery tool made for windows called _Cain & Abel_, this tool would be used to sniff network packets during a match to find out the target's IP address. Once the address was found, the attacker would use another tool to flood the target IP with network traffic and cause the target to to disconnect, and lose the match as a result.
+> This attack is outdated as games are hosted mostly on dedicated servers these days and a single PC isn't powerful enough to bring down a server made for thousands of people, however the dedicated server can still be attacked using larger DDoS attacks using botnets for example. 
+
+**Early criminal career: Social engineering to steal usernames**
+
+On the internet, social media and in gaming communities usernames are a valuable commodity. Rare gamertags (username) can be cool to show off, but stealing and instagram handle of a company can have a serious impact on a business. Ricky would first start with stealing Xbox live gamertags by social engineering different Microsoft support channels to gain information on the target account, and use that information to gain access to the email account linked to the gamertag. Ricky would eventually start monetizing his crimes by selling stolen usernames on the blackmarket for bitcoin. People would pay up to thousands of dollars for a single rare username. 
+
+
 
 
 
@@ -48,3 +55,11 @@ e) Voluntary bonus: Install Debian 13-Trixie Linux on a virtual machine. (Everyo
 f) Voluntary bonus: Install a feed reader and follow some RSS / Atom feeds. (If time permits, everyone will do a version of this later.)
 
 g) Voluntary bonus: Read more blog posts and listen to podcasts. Link those news into larger theory framework, citing relevan articles.
+
+## References
+
+https://darknetdiaries.com/transcript/181/
+
+Cain & Abel - https://en.wikipedia.org/wiki/Cain_and_Abel_(software)
+
+Cain & Abel - How it is used - https://learning.oreilly.com/library/view/cybersecurity-attack/9781788475297/a11337fa-7a56-40a3-9325-5a7cff5877d9.xhtml
