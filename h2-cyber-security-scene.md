@@ -74,7 +74,15 @@ Go to Debian.org. On the Other downloads, under heading "Try Debian live before 
 
 e) Voluntary bonus: Install Debian 13-Trixie Linux on a virtual machine. (Everyone will do this later on the class.)
 
-f) Voluntary bonus: Install a feed reader and follow some RSS / Atom feeds. (If time permits, everyone will do a version of this later.)
+**f) Voluntary bonus: Install a feed reader and follow some RSS / Atom feeds. **
+> google rss feed reader
+> Google AI overview listed several options
+> **FeedFlow** sounded like a good option to start based on it's description, it doesn't have any fancy algorithms or AI features, just lists news as they come. Also it's free and open source.
+> **FeedFlow**: A clean, open-source, algorithmic-free cross-platform app (Android, iOS, macOS, Windows, Linux) that works locally or syncs via iCloud, Dropbox, Google Drive, or self-hosted backends.
+> https://www.feedflow.dev/
+> Download for windows -> redirected to Microsoft store for download
+> 
+
 
 g) Voluntary bonus: Read more blog posts and listen to podcasts. Link those news into larger theory framework, citing relevan articles.
 
