@@ -55,6 +55,9 @@ Ricky had to launder the stolen bitcoins through local buyers a few thousand dol
 
 These days Ricky uses his past experience to speak at cyber security events and is working on building a cybersecurity company. Ricky emphasises the importance of guiding young hackers to use their abilities to prevent cybercrimes rather than commit them.
 
+**Own thoughts**
+Cyber attack news or articles rarely show the human side of the harm caused by the attack. This podcast had a very eye-opening part where Mark's story about being SIM-swapped and having his bitcoins stolen showed the psychological damage the attack caused. Mark had to receive therapy and go through a long recovery process just to get back to normal after the attack.
+
 --------
 
 ### **b) Blog.** Read one article in one of these blogs
