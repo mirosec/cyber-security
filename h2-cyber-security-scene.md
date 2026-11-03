@@ -91,6 +91,9 @@ I chose a relatively recent article from Traficom's National Cyber Security Cent
 >- Russian cyber threat against Finland is shaped by Russia's war on Ukraine
 >- China's cyber activity in finland targets poorly protected consumer devices and network infrastructure to attack third countries
 
+**Own question**
+Instead of strictly defending against cyber threats especially against state agents, should Finland also have offensive cyber operations to proactively defend itself?
+
 ### **c) Science that.**
 Link some theory, model or article you read in h1 CyberScience to a blog post or podcast episode you found here. Can you put a fresh security event in the context of larger understanding?
 
