@@ -57,34 +57,64 @@ These days Ricky uses his past experience to speak at cyber security events and 
 
 --------
 
-b) Blog. Read one article in one of these blogs (Note: yes, just one, single post out of all of these. More is a voluntary bonus task.)
-Schneier on Security (author of the book "Applied Cryptography"), Atom feed, or
-Krebs on Security, or
-Traficom - NCSC News
-Traficom is the Finnish Transport and Communications Agency
-Unit42, or
-Simon Willison (about AI, pick a security focused post)
+**b) Blog.** Read one article in one of these blogs
 
-c) Science that.
+I chose a relatively recent article from Traficom's National Cyber Security Center (NCSC-FI) news feed, as it gave an overview of the recent cyber security threats and events in Finland.
+
+>https://kyberturvallisuuskeskus.fi/en/news/traficom-and-supo-cyber-security-threat-level-remains-high-serious-cases-rise
+
+**Current threat level in Finland**
+>- Finland has had an elevated cyber threat level ever since Russia invaded Ukraine in 2022. 
+>- Serious cases investigated by NCSC-FI (ransomware, data breaches and intrusion) has more than doubled since last year
+>- Findings of software vulnerabilites have increased
+>- Probability of catastrophic society-wide cyberattacks is low
+
+**Software vulnerabilities**
+>- Number of significant cases has increased significantly
+>- Vulnerabilities are more frequent and exploited quicker than before compared to previous year
+
+**Phishing and scam messages**
+>- Number of reported messages increased by 64% compared to last quarter
+>- Bank-themed scams especially popular
+>- NCSC-FI highlights the need for sufficient funding to ensure digital society remains safe
+
+**How prepared is Finland against cyber threats?**
+>- NCSC-FI is actively aware of the cyber security situation in Finland, offers support to organizations in need
+>- Cooperation between sectors of society (private / public) is close and cyber threat information is shared frequently
+
+**State-sponsored cyber threat against Finland remains active**
+>- SUPO actively works to stop foreign state cyber espionage and influence
+>- SUPO provides intelligence to relevant authorities
+>- Russian cyber threat against Finland is shaped by Russia's war on Ukraine
+>- China's cyber activity in finland targets poorly protected consumer devices and network infrastructure to attack third countries
+
+**c) Science that.**
 Link some theory, model or article you read in h1 CyberScience to a blog post or podcast episode you found here. Can you put a fresh security event in the context of larger understanding?
 
-d) Download Debian. Download Debian 13-Trixie installation image on the computer you'll use in the class.
-Go to Debian.org. On the Other downloads, under heading "Try Debian live before installing", choose "Live Xfce". The direct link for "Live Xfce" ISO image will soon become obsolete as new versions are published.
-(Mac users: The linked image is for regular PC's, also known as amd64. If you have an M1, M2, M3, M4... Mac, it uses arm64 processor architecture, and you need to figure it out yourself. I suggest using UTM.)
 
-e) Voluntary bonus: Install Debian 13-Trixie Linux on a virtual machine. (Everyone will do this later on the class.)
 
-**f) Voluntary bonus: Install a feed reader and follow some RSS / Atom feeds. **
-> google rss feed reader
+
+**f) Voluntary bonus:** Install a feed reader and follow some RSS / Atom feeds. 
+> Google rss feed reader
 > Google AI overview listed several options
-> **FeedFlow** sounded like a good option to start based on it's description, it doesn't have any fancy algorithms or AI features, just lists news as they come. Also it's free and open source.
+
+**FeedFlow** sounded like a good option to start based on it's description, it doesn't have any fancy algorithms or AI features, just lists news as they come. Also it's free and open source. Later I can try the fancier feed readers, if the features in this one are lacking.
+ 
 > **FeedFlow**: A clean, open-source, algorithmic-free cross-platform app (Android, iOS, macOS, Windows, Linux) that works locally or syncs via iCloud, Dropbox, Google Drive, or self-hosted backends.
+
 > https://www.feedflow.dev/
-> Download for windows -> redirected to Microsoft store for download
+> Download for windows -> redirected to Microsoft store for download -> finish install
 > 
+> Add feed
 
-
-g) Voluntary bonus: Read more blog posts and listen to podcasts. Link those news into larger theory framework, citing relevan articles.
+Now we need an URL for the feed, let's check if Traficom has one. 
+> https://kyberturvallisuuskeskus.fi/en/rss-feeds
+> 
+> Right-clicked **Information Security now!** feed from the list and chose Copy link
+> 
+> Paste into Feedflow URL field
+> 
+All the Traficom cyber news are now listed in chronological order and ready to read!
 
 ## References
 
