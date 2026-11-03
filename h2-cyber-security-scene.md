@@ -108,6 +108,9 @@ NCSC-FI mentioned that bank-themed phishing has been especially prominent lately
 
 As a personal story my own credit card was the target of a possible cyber attack. It's still unclear how it happened and it's being investigated, but my entire credit was drained with large purchases from Turkey / Ecuador within a day. Even though my card was geo-locked to work in EU only. There were no alerts or MFA requests of any kind, everything was bypassed. The bank couldn't even tell me what I could do differently to avoid this. This event did hurt the trust I have in banking. 
 
+### d) & e) Download/Install debian on virtual machine
+Installation was done and documented in h1 assignment.
+
 ### **f) Voluntary bonus:** Install a feed reader and follow some RSS / Atom feeds. 
 > Google rss feed reader
 > 
