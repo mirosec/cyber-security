@@ -18,7 +18,7 @@ This is the third assignment for the course - https://terokarvinen.com/cyber-sec
 >- Learn directory structure
 
 #### Karvinen 2022: Cracking Passwords with Hashcat
-I won't summarize this separately as it's part of the hash cracking assignment below. 
+>- I won't summarize this separately as it's part of the hash cracking assignment below. 
 
 ### b) Linux. Install Linux on a virtual machine. Use Debian 13-Trixie.  & c) Crack the hash 6b1628b016dff46e6fa35684be6acc96 . Install hashcat and follow the steps in the article to crack the example hash. Karvinen 2022: Cracking Passwords with Hashcat.
 
@@ -100,6 +100,54 @@ Unfortunately it just gave the same error. So time to turn off the virtual machi
 >  $ 6b1628b016dff46e6fa35684be6acc96:summer
 It works! The hash can be decrypted into **summer**. It took 0.03ms to solve. Hash type was MD5. Strange enough this time hashcat returned a message saying Host memory required for this attack: 0 MB, but that is a mystery to solve some other time. 
 
-### d) d) Voluntary bonus: John the Ripper. Install and test John the Ripper Jumbo, see Karvinen 2023: Crack File Password With John. (We might do this together later)
+### d) Voluntary bonus: John the Ripper. Install and test John the Ripper Jumbo, see Karvinen 2023: Crack File Password With John. (We might do this together later)
+
+Let's jump right in and follow the instructions on https://terokarvinen.com/2023/crack-file-password-with-john/. I skipped update and wget since we did those already.
+
+>  $ sudo apt-get -y install micro bash-completion git build-essential libssl-dev zlib1g zlib1g-dev zlib-gst libbz2-1.0 libbz2-dev atool zip
+>
+>  $ E:unable to locate package zlib-gst
+> 
+Tried googling the error, but couldn't find anything definitive. Maybe it's because this is a newer version of Debian. Let's just proceed, hopefully it won't cause any errors, otherwise we'll return to look into it deeper.
+>
+>  $ git clone --depth=1 https://github.com/openwall/john.git
+>
+>  $ bash: git: command not found
+>
+Seems git wasn't installed with the first command. Let's install it.
+>
+>  $ sudo apt-get install git
+>
+>  $ choose y for disk usage
+>
+>  $ git clone --depth=1 https://github.com/openwall/john.git
+>
+>  $ cd john/src/
+>
+>  $ ./configure
+>
+>  $ configure: error: no acceptable C compiler found in $PATH
+>
+Quick google and we need to install a C compiler
+>
+>  $ sudo apt-get install build-essential
+>
+>  $  ./configure
+>
+>  $configure error: OpenSSL headers not found, install them or use --without opsenssl option
+>
+Back to google and seems we need libssl-dev
+>
+>  $ sudo apt-get install libssl-dev
+>
+>  $  ./configure
+>
+>  $ Configure finished. Now "make -s clean && make -sj1" to complete
+>
+Assignment says type -sj4 but terminal says -sj1. The assignment is for an older linux so lets trust the terminal message this time.
+>
+>  $ make -s clean && make -sj1
+>
+It started compiling, let's wait for a few minutes and see what happens.
 
 ### e) Voluntary bonus: The other John. Create an encrypted file (other than zip) and crack the hash with John.
