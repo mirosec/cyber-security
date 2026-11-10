@@ -20,13 +20,16 @@ This is the third assignment for the course - https://terokarvinen.com/cyber-sec
 #### Karvinen 2022: Cracking Passwords with Hashcat
 >- I won't summarize this separately as it's part of the hash cracking assignment below. 
 
-### b) Linux. Install Linux on a virtual machine. Use Debian 13-Trixie.  & c) Crack the hash 6b1628b016dff46e6fa35684be6acc96 . Install hashcat and follow the steps in the article to crack the example hash. Karvinen 2022: Cracking Passwords with Hashcat.
+### b) Linux. Install Linux on a virtual machine. Use Debian 13-Trixie.  
 
 I have already installed Linux on a virtual machine and hashcat, documentation can be found at https://github.com/mirosec/cyber-security/blob/main/h1-cyber-science.md. So I'll be skipping straight to cracking the hash.
 
+### c) Crack the hash 6b1628b016dff46e6fa35684be6acc96 . follow the steps in the article to crack the example hash. Karvinen 2022: Cracking Passwords with Hashcat.
+
 #### Cracking the hash 6b1628b016dff46e6fa35684be6acc96
 
-I'll be following the guide at https://terokarvinen.com/2022/cracking-passwords-with-hashcat/. 
+I'll be following the guide at https://terokarvinen.com/2022/cracking-passwords-with-hashcat/. Unfortunately my shared clipboard between PC and VM linux stopped working even though the settings are correct, but I simply don't have enough time to solve the issue. I'll just have to copy the outputs by hand, but I'll have to skip the long ones.
+
 > hashcat is already installed so I just have to powerup my virtual machine and open terminal
 > 
 > lets make hashed directory (folder) like in the instructions, then use command ls to see list of directories
@@ -134,7 +137,7 @@ Quick google and we need to install a C compiler
 >
 >  $  ./configure
 >
->  $configure error: OpenSSL headers not found, install them or use --without opsenssl option
+>  $configure error: OpenSSL headers not found, install them or use --without openssl option
 >
 Back to google and seems we need libssl-dev
 >
@@ -149,5 +152,46 @@ Assignment says type -sj4 but terminal says -sj1. The assignment is for an older
 >  $ make -s clean && make -sj1
 >
 It started compiling, let's wait for a few minutes and see what happens.
+>
+>  $ make process completed.
+>
+>  $ cd ../run/
+>
+>  $ ls -l
+>
+We can see a long list of executables and scripts, python files. Let's run John.
+>
+>  $ $HOME/john/run/john
+>
+We see John the Ripper 1.9.0-jumbo, installation was successful and John is running.
+>
+Let's download Password Protected ZIP to crack.
+>
+>  $ wget https://TeroKarvinen.com/2023/crack-file-password-with-john/tero.zip
+>
+>  $ unzip tero.zip
+>
+>  $ incorrect password
+>
+We managed to extract an empty folder secretFiles/, but it's contents remain encrypted. We need to decrypt the SECRET.md file inside. We need to extract the password hash into a new file called tero.zip.hash
+>
+>  $ $HOME/john/run/zip2john tero.zip >tero.zip.hash
+>
+Let's have a look at the extracted hash
+>
+>  $ cat tero.zip.hash
+>
+It printed out the hash in long output, but it looks like extraction worked. Let's crack it with John now.
+>
+>  $ $HOME/john/run/john tero.zip.hash
+>
+>  $ Using default input encoding: UTF-8
+>
+>  $ no password hashes loaded (see FAQ)
+>
+I googled the error, but it was hard to find anything useful. There was a part about unshadowing, but it seems kind of complicated for this assignment. I tried to add --format=crypt.
+>
+>  $ $HOME/john/run/john tero.zip.hash --format=crypt
+>
+But it gave the same exact error. I even tried installing zliblg (there was no zlib-gst) which was missing earlier, but it didn't help either. We hit a wall for now, maybe we'll come back later to try fix the error.
 
-### e) Voluntary bonus: The other John. Create an encrypted file (other than zip) and crack the hash with John.
