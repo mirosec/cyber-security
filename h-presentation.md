@@ -1,4 +1,4 @@
-Presentation file will be added later
+
 [Case eMudhra - failure in key managament.pdf](https://github.com/user-attachments/files/34690933/Case.eMudhra.-.failure.in.key.managament.pdf)
 
 Cyber Security - ICB705AS3YE-2
