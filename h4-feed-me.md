@@ -135,7 +135,7 @@ When testing these with nmap they will still show as open to the local network. 
 
 ---
 
-### Voluntary e) & f): Port scanning Apache on local host
+### Voluntary e) & f): Port scanning Apache on local host - Cyber lab
 
 - Identify a port scan against Apache on the host being scanned, e.g. in logs. Perform the test against "localhost" address and disconnect the internet while port scanning.
 - Modify nmap scan so that it cannot be detected by the method you found above.
