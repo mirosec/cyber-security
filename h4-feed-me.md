@@ -70,6 +70,8 @@ Let's try pinging Google nameservers again, the ping process will be stuck, but 
 
 100% packet loss means no connection, if you are extra paranoid you could check if the browser works. Next let's scan our own VM using the localhost address.
 
+#### Scanning our localhost virtual machine
+
 <img width="621" height="241" alt="image" src="https://github.com/user-attachments/assets/c7ac0a21-4551-4eba-9113-aa449a46a26a" />
 
 999 ports are closed. We can see port 631 is open and we can even see it's service or what it's used for. IPP is internet printing protocol, which like it's name suggests is used for communicating with printers over a network. If this port was open to the internet, attackers could intercept sensitive documents or even remotely print full black pages and jam our printer. (https://www.security.gov.uk/services-resources/cyber-services-government/domain-and-vulnerability-knowledge-base/open-port-631-internet-printing-protocol-ipp/)
@@ -79,6 +81,8 @@ Next we should install a daemon (process that runs in the background - https://e
 <img width="594" height="231" alt="image" src="https://github.com/user-attachments/assets/55778ab2-2426-4039-81a4-1d92ab980153" />
 
 We need to get access to Internet again, so time to plug the virtual cable back same way as we unplugged it. After we can make sure we have internet by pinging Google again.
+
+#### Installing daemon
 
 > $ sudo apt-get install firewalld
 > $ sudo apt-get install ssh
