@@ -8,14 +8,16 @@ This is the fourth assignment for the course - https://terokarvinen.com/cyber-se
 
 I have installed and documented FeedFlow in my earlier assignment h2: https://github.com/mirosec/cyber-security/blob/main/h2-cyber-security-scene.md
 
-#### x) Why install a feed reader?
+### x) Why install a feed reader?
 
 The main advantage a feed reader offers is simplicity: you only get the news from sources you selected and nothing else. There are no ads or recommended articles, it's just pure, distilled
 news content for you to read in the order it was published. You have complete control on what you want to add to a feed reader. A feed reader also has a definitive end, there is no endless scrolling. Privacy is also improved when you don't have to log onto a news website on a browser just to read the latest news. 
 
+
 <img width="1000" height="650" alt="image" src="https://github.com/user-attachments/assets/7545f504-f19d-46f0-90b0-af54cd50effa" />
 
-#### b, c, d) Adding more cyber security feeds
+
+### b, c, d) Adding more cyber security feeds
 
 Finding new blogs to follow was super easy, I googled **cyber security blogs for rss feed** and started adding them by copying the link address for each site to the Feed URL field (shown in screenshot). I chose a few vendor blogs (Cisco Talos, Palo Alto unit 42 and Microsoft Security Blog) since they are relevant to my work. We provide networks solutions based on their technology. 
 
@@ -50,19 +52,27 @@ First let's install **Network mapper** (nmap) the port scanning tool
 
 Next we should disconnect our VM from the internet so there is not even an accidental chance that we port scan an innocent network and become a devious cyber criminal. We will test the internet connection by pinging Google nameservers (8.8.8.8)
 
+
 <img width="418" height="201" alt="image" src="https://github.com/user-attachments/assets/1e087dea-d819-419b-93c2-83dd82e0ee93" />
+
 
 Next let's pull the virtual plug on this virtual machine. You could also just plug the physical cable or shutdown your router, but it's more exciting this way. (Also you don't have to shut off the internet for the entire house.)
 
+
 <img width="564" height="294" alt="image" src="https://github.com/user-attachments/assets/d4b4a39d-8abd-4a69-8c4b-bb8bd7fd4654" />
+
 
 Click the virtual cable button then OK.
 
+
 <img width="567" height="372" alt="image" src="https://github.com/user-attachments/assets/ced22341-c120-499b-ab25-dbfce832ec06" />
+
 
 Let's try pinging Google nameservers again, the ping process will be stuck, but you can press CTRL + C to cancel the process after a moment.
 
+
 <img width="554" height="100" alt="image" src="https://github.com/user-attachments/assets/a8c5ef6c-24a7-453c-bdde-371b3e8c0372" />
+
 
 100% packet loss means no connection, if you are extra paranoid you could check if the browser works. Next let's scan our own VM using the localhost address.
 
@@ -70,7 +80,9 @@ Let's try pinging Google nameservers again, the ping process will be stuck, but 
 
 ### Scanning our localhost virtual machine
 
+
 <img width="621" height="241" alt="image" src="https://github.com/user-attachments/assets/c7ac0a21-4551-4eba-9113-aa449a46a26a" />
+
 
 999 ports are closed. We can see port 631 is open and we can even see it's service or what it's used for. IPP is internet printing protocol, which like it's name suggests is used for communicating with printers over a network. If this port was open to the internet, attackers could intercept sensitive documents or even remotely print full black pages and jam our printer. 
 
@@ -80,20 +92,24 @@ Next we should install a daemon (process that runs in the background). I googled
 
 Fail2ban is a great way to protect your VM also, especially if you run a internet facing webserver like Apache. I'll also install sshd (remote secure connection daemon) just in case firewalld doesn't actually open any ports.
 
+
 <img width="594" height="231" alt="image" src="https://github.com/user-attachments/assets/55778ab2-2426-4039-81a4-1d92ab980153" />
+
 
 We need to get access to Internet again, so time to plug the virtual cable back same way as we unplugged it. After we can make sure we have internet by pinging Google again.
 
 ---
 
-#### Installing daemon
+### Installing daemon
 
 > $ sudo apt-get install firewalld
 > $ sudo apt-get install ssh
 
 Let's unplug the virtual cable again before we test nmapping localhost.
 
+
 <img width="635" height="262" alt="image" src="https://github.com/user-attachments/assets/07529e00-47c5-436b-8266-b724dc5c4b81" />
+
 
 We can now see port 22 is also open for SSH or Secure Shell, which means you can connect to this VM using a terminal on another PC. This is a pretty dangerous port to have open, since it will be one of the most targeted ports. Getting SSH access on a server or computer means you have access to do anything you want based on the privileges your account has. If you managed to gain root access, you can do anything on that computer: steal data, shutdown or install services, install malware and so on. (https://goteleport.com/blog/ssh-port-22/)
 
@@ -105,15 +121,19 @@ Since have no need for either of these ports, we could close them using firewall
 - https://www.protocolports.org/en/port/22
 - https://www.protocolports.org/en/port/631
 
----
 
 <img width="683" height="130" alt="image" src="https://github.com/user-attachments/assets/84dea028-c796-48d2-b6ad-4069c1fe1c31" />
 
+
 Since SSH was installed as a service and not just a port, we need to use the remove-service modifier in the command. I simply used Google search AI to find the correct commands for firewalld.
+
 
 <img width="616" height="107" alt="image" src="https://github.com/user-attachments/assets/7888f15d-d271-4440-9899-304bfef1a276" />
 
+
 When testing these with nmap they will still show as open to the local network. Unfortunately I could not find a way to scan, if these ports are open to the internet without nmapping my public IP, which I'm not going to do in this case just 
+
+---
 
 ### Voluntary e) & f): Port scanning Apache on local host
 
@@ -126,13 +146,16 @@ Let's start with installing apache2 web server. This allows us to host websites 
 > 
 > $ sudo apt install apache2
 
+
 <img width="700" height="250" alt="image" src="https://github.com/user-attachments/assets/cd2157ad-e53f-4621-88b5-3946cde27b84" />
 
-#### Checking the logs
+
+### Checking the logs
 
 Now we need to check the logs for apache2 to see what the port scanning looks like. After a quick googling to refresh my memory logs are found in /var/log/apache2/, there's an error.log and access.log. I ran **$ nmp localhost** and checked the access log with **$ sudo cat /var/log/apache2./access.log**. 
 
 The log was empty, the port scan was not showing on it. I made sure apache2 was running:
+
 
 <img width="900" height="90" alt="image" src="https://github.com/user-attachments/assets/0210ae6f-fb14-4a2d-9f0a-38066d6da447" />
 
@@ -142,20 +165,28 @@ I also checked with my browser, this did show up in the access logs.
 
 <img width="981" height="226" alt="image" src="https://github.com/user-attachments/assets/f593dcd8-1283-40fe-bab6-2a27efd9626f" />
 
-#### Running the scan
+
+### Running the scan
 
 Maybe the issue is that nmap isn't somehow scanning apache in a way that triggers the logs. I tried googling for how to see port scans in apache logs, but didn't find anything useful. Let's check the the help for nmap with **$ nmap --help**. The end of the output showed something interesting:
 
+
 <img width="869" height="279" alt="image" src="https://github.com/user-attachments/assets/104fa294-c22b-428d-9601-986895e9f2cf" />
 
+
 let's try **$ nmap -v -A localhost** from the example list, this should run multiple types of scans. We can now clearly see apache2 and http mentioned.
+
 
 <img width="700" height="389" alt="image" src="https://github.com/user-attachments/assets/9fa326ae-a42d-4209-b27b-bdac46e23bd6" />
 
 
 Now for the logs **$ sudo cat /var/log/apache2./access.log**, we can literally see nmap scripting engine written on the logs.
 
+
 <img width="730" height="362" alt="image" src="https://github.com/user-attachments/assets/a10e9324-d528-40cd-8152-8bc5ffadb148" />
+
+
+### Avoiding detection
 
 Next we need to perform a scan without being detected in the logs. I don't really have a clear idea on where to take this, so I'll google for common methods to avoid detection when port scanning with nmap. I looked through the list of nmap command modifiers the AI overview gave me and picked a few that would be good to try. These were the first options in the categories **Timing and rate, packet fragmentation and Source masking and spoofing**. 
 
@@ -167,6 +198,7 @@ Next we need to perform a scan without being detected in the logs. I don't reall
 
 I did have to ask the AI for further help with syntax (decoy was especially tricky) and ended up with **$ sudo nmap -A -T3 -f -D 192.168.1.10,192.168.1.25,ME localhost**. I had to add the -A since otherwise it wouldn't scan for apache2 specifically even though you could see port 80 open indicating a webserver.
 
+
 <img width="1630" height="201" alt="image" src="https://github.com/user-attachments/assets/7898dde8-e8f5-4c1c-b61e-9799fab96da5" />
 
 
@@ -177,7 +209,9 @@ The logs looked hopeful at the start, but the nmap showed up again. The command 
 
 <img width="652" height="304" alt="image" src="https://github.com/user-attachments/assets/8e19cd0c-5d9e-4bc5-b7a9-8f8064e67399" />
 
+
 Just when I thought it worked, you can still see **/nmaplowercheck** in the log. So nmap was almost removed, but not quite. I'll have to return to this some time later to see, if it's possible to hide it completely.
+
 
 <img width="1773" height="582" alt="image" src="https://github.com/user-attachments/assets/2514c6e1-c28e-45c8-8865-62cb527e2e9d" />
 
