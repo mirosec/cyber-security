@@ -48,6 +48,8 @@ I used Gemini AI to explain terms mission-based, TTP and DIEFD (Data, Informatio
 >- How can latest technologies advance threat modeling in the defense industry?
 >- How can AI-driven technologies be incorporated to maximize performance of threat modeling processes?
 
+---
+
 ### c) Threat modeling quickrun. Create two risks and decide what to do with them. Imagine the details. Be brief, but specific.
 #### Company 
 >Janko's Concrete
