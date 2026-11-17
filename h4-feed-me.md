@@ -76,9 +76,13 @@ Let's try pinging Google nameservers again, the ping process will be stuck, but 
 
 <img width="621" height="241" alt="image" src="https://github.com/user-attachments/assets/c7ac0a21-4551-4eba-9113-aa449a46a26a" />
 
-999 ports are closed. We can see port 631 is open and we can even see it's service or what it's used for. IPP is internet printing protocol, which like it's name suggests is used for communicating with printers over a network. If this port was open to the internet, attackers could intercept sensitive documents or even remotely print full black pages and jam our printer. (https://www.security.gov.uk/services-resources/cyber-services-government/domain-and-vulnerability-knowledge-base/open-port-631-internet-printing-protocol-ipp/)
+999 ports are closed. We can see port 631 is open and we can even see it's service or what it's used for. IPP is internet printing protocol, which like it's name suggests is used for communicating with printers over a network. If this port was open to the internet, attackers could intercept sensitive documents or even remotely print full black pages and jam our printer. 
 
-Next we should install a daemon (process that runs in the background - https://en.wikipedia.org/wiki/Daemon_(computing)). I googled basic linux daemons and chose **firewalld**, since we could use it to easily manage ports and network traffic, and we can make port changes without restarting. Fail2ban is a great way to protect your VM also, especially if you run a internet facing webserver like Apache. I'll also install sshd (remote secure connection daemon) just in case firewalld doesn't actually open any ports.
+https://www.security.gov.uk/services-resources/cyber-services-government/domain-and-vulnerability-knowledge-base/open-port-631-internet-printing-protocol-ipp/
+
+Next we should install a daemon (process that runs in the background). I googled basic linux daemons and chose **firewalld**, since we could use it to easily manage ports and network traffic, and we can make port changes without restarting. 
+
+Fail2ban is a great way to protect your VM also, especially if you run a internet facing webserver like Apache. I'll also install sshd (remote secure connection daemon) just in case firewalld doesn't actually open any ports.
 
 <img width="594" height="231" alt="image" src="https://github.com/user-attachments/assets/55778ab2-2426-4039-81a4-1d92ab980153" />
 
@@ -114,6 +118,8 @@ Since SSH was installed as a service and not just a port, we need to use the rem
 <img width="716" height="137" alt="image" src="https://github.com/user-attachments/assets/7888f15d-d271-4440-9899-304bfef1a276" />
 
 When testing these with nmap they will still show as open to the local network. Unfortunately I could not find a way to scan, if these ports are open to the internet without nmapping my public IP, which I'm not going to do in this case just 
+
+#### Voluntary e) & f): Port scanning Apache on local host
 
 
 
