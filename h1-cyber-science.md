@@ -2,6 +2,8 @@
 
 This is the first assignment for the course - https://terokarvinen.com/cyber-security/
 
+---
+
 ### a) Science hunt. Find a review article related to the themes in the course. Detail your process to find and choose the article
 
 I chose threat modeling for the topic of the article, since it is the starting point for applying cyber security. Bottom of the page in Google scholar search results includes related searches I used for search term ideas.
@@ -25,6 +27,8 @@ This article is a systematic literature review, which is a synthesis of availabl
 
 >checked JUFO for journal validity https://jfp.csc.fi/jufoportaali
 Jufo ID 78297. IEEE Access is level 1 - basic, which is acceptable in this assignment. 
+
+---
 
 ### b) Reviewing the review
 #### Key areas being researched (research questions)
@@ -74,6 +78,7 @@ There was a surprising lack of threat modeling review articles, so I created an 
 
 **Later update:** Be careful! After creating the email alert I soon started receiving suspicious spam mail from dubious updates@academia-mail.com telling me to Please save this PDF. The spam mail was very vague "here is an article on network security, please open and save it immediately". 
 
+---
 
 ### e) Install Linux on virtual machine
 I'll try to be as detailed as possible within reason, so that someone with little knowledge could follow the instructions and do the same. 
@@ -97,6 +102,8 @@ I'll try to be as detailed as possible within reason, so that someone with littl
 >- write changes to disk: yes, additional packages: no, network mirror:yes, proxy:no
 >- Default settings on following screens, Finish installation
 >- To check internet connectivity, I opened firefox browser went to terokarvinen.com successfully
+
+---
 
 ### f) Voluntary technical puzzle, without the use of AI
 #### ==gCh8mclRFIs8GbsVGS
@@ -171,6 +178,7 @@ Could the assignment be devious enough to have actually reversed the encoding?
 
 We finally got the answer! The puzzle was in reversed base64 encoding. 
 
+---
 
 ## References 
 This is the first assignment for the course - https://terokarvinen.com/cyber-security/
