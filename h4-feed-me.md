@@ -27,7 +27,7 @@ For general cyber security news I chose theregister.com because it's base in UK 
 
 ---
 
-#### y) Cyber security is serious business - Dangers of port scanning
+### y) Cyber security is serious business - Dangers of port scanning
 
 This is a summary of a courtcase about port scanning a bank's network and its consequences (Supreme court of Finland, case Osuuspankkikeskus port scan KKO:2003:36) Have a brief look, summarize the key thing in a couple of bullets or sentences. 
 
@@ -45,7 +45,7 @@ This was the first port scanning court case in Finland and A probably had to be 
 
 ---
 
-#### f) Test environment: Port scanning 
+### f) Test environment: Port scanning 
 
 Test is done on Debian linux virtual machine I setup in earlier assignments. 
 
@@ -70,7 +70,9 @@ Let's try pinging Google nameservers again, the ping process will be stuck, but 
 
 100% packet loss means no connection, if you are extra paranoid you could check if the browser works. Next let's scan our own VM using the localhost address.
 
-#### Scanning our localhost virtual machine
+---
+
+### Scanning our localhost virtual machine
 
 <img width="621" height="241" alt="image" src="https://github.com/user-attachments/assets/c7ac0a21-4551-4eba-9113-aa449a46a26a" />
 
@@ -81,6 +83,8 @@ Next we should install a daemon (process that runs in the background - https://e
 <img width="594" height="231" alt="image" src="https://github.com/user-attachments/assets/55778ab2-2426-4039-81a4-1d92ab980153" />
 
 We need to get access to Internet again, so time to plug the virtual cable back same way as we unplugged it. After we can make sure we have internet by pinging Google again.
+
+---
 
 #### Installing daemon
 
@@ -98,8 +102,10 @@ Fun fact: SSH was created by a finnish person Tatu Ylönen in 1995
 Since have no need for either of these ports, we could close them using firewalld. **Warning:** if you are currently using SSH to connect to your virtual machine, you can accidentally lock yourself out by block your SSH port. 
 
 **Good source for info on ports:**
-https://www.protocolports.org/en/port/22
-https://www.protocolports.org/en/port/631
+- https://www.protocolports.org/en/port/22
+- https://www.protocolports.org/en/port/631
+
+---
 
 <img width="783" height="180" alt="image" src="https://github.com/user-attachments/assets/84dea028-c796-48d2-b6ad-4069c1fe1c31" />
 
@@ -107,16 +113,7 @@ Since SSH was installed as a service and not just a port, we need to use the rem
 
 <img width="716" height="137" alt="image" src="https://github.com/user-attachments/assets/7888f15d-d271-4440-9899-304bfef1a276" />
 
-
-How can criminals know what services your employer has? Disconnect your computer from the internet while doing the test (after you have installed the required software). Do the test inside your virtual machine.
-
-    Install nmap port scanner
-    Disconnect from the internet. Show that 'ping 8.8.8.8' stops working when internet is disconnected.
-    Port scan your own computer. Use "localhost" as the address.
-    Install a daemon
-    Port scan again
-    Analyze and explain the results
-    Do not scan random computers.
+When testing these with nmap they will still show as open to the local network. Unfortunately I could not find a way to scan, if these ports are open to the internet without nmapping my public IP, which I'm not going to do in this case just 
 
 
 
