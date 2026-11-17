@@ -2,6 +2,8 @@
 
 This is the second assignment for the course - https://terokarvinen.com/cyber-security/
 
+---
+
 Read/watch/listen and summarize cyber security **a)** podcast and **b)** blog, **c)** Link a science article to either one. 
 
 ### a) Darknet Diaries - Ricky - https://darknetdiaries.com/episode/181/
@@ -58,7 +60,7 @@ These days Ricky uses his past experience to speak at cyber security events and 
 **Own thoughts**
 Cyber attack news or articles rarely show the human side of the harm caused by the attack. This podcast had a very eye-opening part where Mark's story about being SIM-swapped and having his bitcoins stolen showed the psychological damage the attack caused. Mark had to receive therapy and go through a long recovery process just to get back to normal after the attack.
 
---------
+---
 
 ### **b) Blog.** Read one article in one of these blogs
 
@@ -94,6 +96,8 @@ I chose a relatively recent article from Traficom's National Cyber Security Cent
 **Own question**
 Instead of strictly defending against cyber threats especially against state agents, should Finland also have offensive cyber operations to proactively defend itself?
 
+---
+
 ### **c) Science that.**
 Link some theory, model or article you read in h1 CyberScience to a blog post or podcast episode you found here. Can you put a fresh security event in the context of larger understanding?
 
@@ -107,6 +111,8 @@ I chose a systematic literature review on how security affects e-banking adoptio
 NCSC-FI mentioned that bank-themed phishing has been especially prominent lately. A bank account is a valuable target since a successful attack can directly reward the attacker with money. No need for ransoming, selling information or negotiating. The pool of potential victims are huge and includes millions of people. The attackers can focus on targeting masses of people using methods enhanced by AI. While the main goal of the attackers is to exploit unaware users to gain access to their accounts, the attackers are also targeting banks' AI fraud detection systems with data poisoning. 
 
 As a personal story my own credit card was the target of a possible cyber attack. It's still unclear how it happened and it's being investigated, but my entire credit was drained with large purchases from Turkey / Ecuador within a day. Even though my card was geo-locked to work in EU only. There were no alerts or MFA requests of any kind, everything was bypassed. The bank couldn't even tell me what I could do differently to avoid this. This event did hurt the trust I have in banking. 
+
+---
 
 ### d) & e) Download/Install debian on virtual machine
 Installation was done and documented in h1 assignment.
@@ -133,6 +139,8 @@ Now we need an URL for the feed, let's check if Traficom has one.
 > Paste into Feedflow URL field
 > 
 All the Traficom cyber news are now listed in chronological order and ready to read!
+
+---
 
 ## References
 
