@@ -21,10 +21,6 @@ Finding new blogs to follow was super easy, I googled **cyber security blogs for
 
 For general cyber security news I chose theregister.com because it's base in UK so it's good to have some variety to all the US-based sites. Finally I added darkreading for general news on cyber security, I opened the site and skimmed through a few articles to see what it was like and it seemed have quality news articles.
 
-#### e) Results from following the feeds
-
-
-
 ---
 
 ### y) Cyber security is serious business - Dangers of port scanning
@@ -111,15 +107,77 @@ Since have no need for either of these ports, we could close them using firewall
 
 ---
 
-<img width="783" height="180" alt="image" src="https://github.com/user-attachments/assets/84dea028-c796-48d2-b6ad-4069c1fe1c31" />
+<img width="683" height="130" alt="image" src="https://github.com/user-attachments/assets/84dea028-c796-48d2-b6ad-4069c1fe1c31" />
 
 Since SSH was installed as a service and not just a port, we need to use the remove-service modifier in the command. I simply used Google search AI to find the correct commands for firewalld.
 
-<img width="716" height="137" alt="image" src="https://github.com/user-attachments/assets/7888f15d-d271-4440-9899-304bfef1a276" />
+<img width="616" height="107" alt="image" src="https://github.com/user-attachments/assets/7888f15d-d271-4440-9899-304bfef1a276" />
 
 When testing these with nmap they will still show as open to the local network. Unfortunately I could not find a way to scan, if these ports are open to the internet without nmapping my public IP, which I'm not going to do in this case just 
 
-#### Voluntary e) & f): Port scanning Apache on local host
+### Voluntary e) & f): Port scanning Apache on local host
+
+- Identify a port scan against Apache on the host being scanned, e.g. in logs. Perform the test against "localhost" address and disconnect the internet while port scanning.
+- Modify nmap scan so that it cannot be detected by the method you found above.
+
+Let's start with installing apache2 web server. This allows us to host websites on the virtual machine and it should open port 80 for http traffic.
+
+> $ sudo apt update
+> 
+> $ sudo apt install apache2
+
+<img width="700" height="250" alt="image" src="https://github.com/user-attachments/assets/cd2157ad-e53f-4621-88b5-3946cde27b84" />
+
+#### Checking the logs
+
+Now we need to check the logs for apache2 to see what the port scanning looks like. After a quick googling to refresh my memory logs are found in /var/log/apache2/, there's an error.log and access.log. I ran **$ nmp localhost** and checked the access log with **$ sudo cat /var/log/apache2./access.log**. 
+
+The log was empty, the port scan was not showing on it. I made sure apache2 was running:
+
+<img width="900" height="90" alt="image" src="https://github.com/user-attachments/assets/0210ae6f-fb14-4a2d-9f0a-38066d6da447" />
 
 
+I also checked with my browser, this did show up in the access logs. 
+
+
+<img width="981" height="226" alt="image" src="https://github.com/user-attachments/assets/f593dcd8-1283-40fe-bab6-2a27efd9626f" />
+
+#### Running the scan
+
+Maybe the issue is that nmap isn't somehow scanning apache in a way that triggers the logs. I tried googling for how to see port scans in apache logs, but didn't find anything useful. Let's check the the help for nmap with **$ nmap --help**. The end of the output showed something interesting:
+
+<img width="869" height="279" alt="image" src="https://github.com/user-attachments/assets/104fa294-c22b-428d-9601-986895e9f2cf" />
+
+let's try **$ nmap -v -A localhost** from the example list, this should run multiple types of scans. We can now clearly see apache2 and http mentioned.
+
+<img width="700" height="389" alt="image" src="https://github.com/user-attachments/assets/9fa326ae-a42d-4209-b27b-bdac46e23bd6" />
+
+
+Now for the logs **$ sudo cat /var/log/apache2./access.log**, we can literally see nmap scripting engine written on the logs.
+
+<img width="730" height="362" alt="image" src="https://github.com/user-attachments/assets/a10e9324-d528-40cd-8152-8bc5ffadb148" />
+
+Next we need to perform a scan without being detected in the logs. I don't really have a clear idea on where to take this, so I'll google for common methods to avoid detection when port scanning with nmap. I looked through the list of nmap command modifiers the AI overview gave me and picked a few that would be good to try. These were the first options in the categories **Timing and rate, packet fragmentation and Source masking and spoofing**. 
+
+> -T0 (Paranoid) and -T1 (Sneaky). These timing templates introduce massive delays between packets. -T0 waits at least 5 minutes between probes, while -T1 waits at least 15 seconds.
+>
+> -f (Fragment Packets). This splits the TCP header over several tiny IP packets (8 bytes of data per packet), making it harder for simple packet filters to inspect the payload.
+>
+> -D <decoy1,decoy2,ME> (Decoy Scan). Nmap generates fake scans using spoofed source IP addresses alongside your real IP (ME). The target's logs show multiple machines scanning simultaneously, hiding the true scanner among the noise.
+
+I did have to ask the AI for further help with syntax (decoy was especially tricky) and ended up with **$ sudo nmap -A -T3 -f -D 192.168.1.10,192.168.1.25,ME localhost**. I had to add the -A since otherwise it wouldn't scan for apache2 specifically even though you could see port 80 open indicating a webserver.
+
+<img width="1630" height="201" alt="image" src="https://github.com/user-attachments/assets/7898dde8-e8f5-4c1c-b61e-9799fab96da5" />
+
+
+The logs looked hopeful at the start, but the nmap showed up again. The command didn't work. I asked the AI again for _how do I scan for apache using nmap without showing up in access logs_ and made this command: 
+
+**$ nmap -p 80 -sV --script=http-title --script-args http.useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" localhost"**. 
+
+
+<img width="652" height="304" alt="image" src="https://github.com/user-attachments/assets/8e19cd0c-5d9e-4bc5-b7a9-8f8064e67399" />
+
+Just when I thought it worked, you can still see **/nmaplowercheck** in the log. So nmap was almost removed, but not quite. I'll have to return to this some time later to see, if it's possible to hide it completely.
+
+<img width="1773" height="582" alt="image" src="https://github.com/user-attachments/assets/2514c6e1-c28e-45c8-8865-62cb527e2e9d" />
 
