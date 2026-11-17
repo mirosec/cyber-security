@@ -2,6 +2,8 @@
 
 This is the third assignment for the course - https://terokarvinen.com/cyber-security/
 
+---
+
 ### x) Read/watch/listen and summarize (This subtasks x does not require tests with a computer. Some bullets per article is enough for your summary, feel free to write more if you like. Add a bullet for your own idea or question. Reading emphasized, no extensive essays needed for this subtask.)
 
 #### Heinonen 2026: How to Install Linux to Virtualbox?
@@ -23,6 +25,8 @@ This is the third assignment for the course - https://terokarvinen.com/cyber-sec
 ### b) Linux. Install Linux on a virtual machine. Use Debian 13-Trixie.  
 
 I have already installed Linux on a virtual machine and hashcat, documentation can be found at https://github.com/mirosec/cyber-security/blob/main/h1-cyber-science.md. So I'll be skipping straight to cracking the hash.
+
+---
 
 ### c) Crack the hash 6b1628b016dff46e6fa35684be6acc96 . follow the steps in the article to crack the example hash. Karvinen 2022: Cracking Passwords with Hashcat.
 
@@ -102,6 +106,8 @@ Unfortunately it just gave the same error. So time to turn off the virtual machi
 >
 >  $ 6b1628b016dff46e6fa35684be6acc96:summer
 It works! The hash can be decrypted into **summer**. It took 0.03ms to solve. Hash type was MD5. Strange enough this time hashcat returned a message saying Host memory required for this attack: 0 MB, but that is a mystery to solve some other time. 
+
+---
 
 ### d) Voluntary bonus: John the Ripper. Install and test John the Ripper Jumbo, see Karvinen 2023: Crack File Password With John. (We might do this together later)
 
