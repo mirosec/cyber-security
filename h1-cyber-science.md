@@ -115,31 +115,47 @@ I am guessing this is a hash of a password or maybe a strong password based on m
 >- Found site: https://createpassword.in/blog/12-vs-16-vs-20-character-password-length-guide
 >- 20 character password would be the best option for root/admin passwords
 >- Site mentions **hashcat** or **john the ripper** as popular software to crack passwords
+
 #### Installing hashcat
+
 Let's try installing hashcat on debian linux and see what happens if we give it the puzzle, google How to install hashcat on linux
->- Open Terminal from the debian applications menu on the Virtual Machine created earlier
->- **VM machine terminal:** sudo apt install hashcat
->- Didn't work, system is asking for **Media change insert disc**, after googling the error it seems installation is attempted locally instead of online. Followed instruction on Google AI Overview to remove cd-rom from installation source list using terminal
->- **VM terminal:** sudo nano /etc/apt/sources.list
->- used # to comment out the **deb cdrom:** on the first line, then pressed ctrl+x to exit, yes to save
->- **VM terminal:** sudo apt install haschat -> this time installation works
+
+Open Terminal from the debian applications menu on the Virtual Machine created earlier
+
+```
+sudo apt install hashcat
+```
+
+Didn't work, system is asking for **Media change insert disc**, after googling the error it seems installation is attempted locally instead of online. Followed instruction on Google AI Overview to remove cd-rom from installation source list using terminal
+
+```
+sudo nano /etc/apt/sources.list
+```
+
+used # to comment out the **deb cdrom:** on the first line, then pressed ctrl+x to exit, yes to save
+```sudo apt install haschat``` -> this time installation works
+
 #### Using hashcat
->- **VM terminal:** hashcat
->- **VM terminal:** hashcat --help
+
+```
+hashcat
+hashcat --help
+```
 
 Looks like we have to specify the attack type, hash type (autodetect might work) and then save the **==gCh8mclRFIs8GbsVGS** as a file on the VM for hashcat to work, since you can't just copypaste it directly to the terminal. 
 
 Copypasting from host PC to VM doesn't work without changing settings and restarting the VM, but thankfully internet works on the VM so I can just get the hash from the course website. First let's see what folder I am in.
 
->- **VM terminal:** pwd
->- /home/miro
+```pwd```
+
+I'm in /home/miro
 
 Now to open a new text file with nano and paste **==gCh8mclRFIs8GbsVGS** I copied from the course website using the browser in the VM.
->- **VM terminal:** nano
+>- **VM terminal:** ```nano```
 >- Then ctrl + shift + v to paste the puzzle. Ctrl + X to exit and save, name file to **puzzle.txt**
->- **VM terminal:** ls
+>- **VM terminal:** ```ls```
 >- Shows me the list of current files in the folder and I can see **puzzle.txt**
->- **VM terminal:** hashcat -a 0 puzzle.txt
+>- **VM terminal:** ```hashcat -a 0 puzzle.txt```
 >- Hashcat couldn't detect what type of hash was input
 >- Google search: how to find out hash type
 >- https://hashes.com/en/tools/hash_identifier tried this but it couldn't identify
@@ -154,7 +170,7 @@ I'm tempted to just google "what hash starts with ==", but I'm not sure if it wo
 >- I found https://www.boxentriq.com/analysis/cipher-identifier and it says the puzzle is 100% base85.
 >- Google base85 decoder linux
 >- Tried using the following command
->- **VM terminal:** basenc -d --z85 puzzle.txt
+>- **VM terminal:** ```basenc -d --z85 puzzle.txt```
 >- but it returned complete gibberish with random ??? icons
 >
 I should have enabled shared clipboard between host PC and virtual machine earlier, but I'll just have to do it now.
@@ -174,9 +190,9 @@ So maybe the online tool scammed me and this is base64 instead. The puzzle does 
 Could the assignment be devious enough to have actually reversed the encoding?
 
 >- Google how to reverse text with linux and how to decode base64 linux
->- **VM terminal:** echo "==gCh8mclRFIs8GbsVGS" | rev
->- **VM terminal:** echo "SGVsbG8sIFRlcm8hCg==" | base64 -d
->- **VM terminal:** Hello, Tero!
+>- **VM terminal:** ```echo "==gCh8mclRFIs8GbsVGS" | rev```
+>- **VM terminal:** ```echo "SGVsbG8sIFRlcm8hCg==" | base64 -d```
+>- **VM terminal:** ```Hello, Tero!```
 
 We finally got the answer! The puzzle was in reversed base64 encoding. 
 
