@@ -8,11 +8,11 @@ https://terokarvinen.com/cyber-security/
 
 ### Introduction
 
-Hey,
+- Miro Seppälä
+- Student at Haaga-Helia 
+- Network & Security Solution Architect in solution sales at Telia Finland
 
-I'm Miro Seppälä and I am student at Haaga-Helia and a Network & Security Solution Architect in solution sales at Telia Finland.
-
-This repository is for my Cyber Security course assignments. 
+This repository is for my Cyber Security course assignments and future hobby projects
 
 Assignments will be done a linux (debian) virtual machine. First assignments lack screenshots, but later assignments include relevant screenshots. 
 
