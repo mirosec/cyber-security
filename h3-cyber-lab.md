@@ -7,24 +7,24 @@ This is the third assignment for the course - https://terokarvinen.com/cyber-sec
 ### x) Read/watch/listen and summarize (This subtasks x does not require tests with a computer. Some bullets per article is enough for your summary, feel free to write more if you like. Add a bullet for your own idea or question. Reading emphasized, no extensive essays needed for this subtask.)
 
 #### Heinonen 2026: How to Install Linux to Virtualbox?
->- Very detailed instructions with explained basic concepts
->- Learn how to install linux on a virtual machine
->- Includes plenty of screenshots
->- Great for beginners with little technical knowledge
+- Very detailed instructions with explained basic concepts
+- Learn how to install linux on a virtual machine
+- Includes plenty of screenshots
+- Great for beginners with little technical knowledge
 
 #### Karvinen 2020: Command Line Basics Revisited
->- Navigate folders
->- Create, edit and remove files
->- Install applications
->- Open secure remote connections
->- Learn directory structure
+- Navigate folders
+- Create, edit and remove files
+- Install applications
+- Open secure remote connections
+- Learn directory structure
 
 #### Karvinen 2022: Cracking Passwords with Hashcat
->- I won't summarize this separately as it's part of the hash cracking assignment below. 
+- I won't summarize this separately as it's part of the hash cracking assignment below. 
 
 ### b) Linux. Install Linux on a virtual machine. Use Debian 13-Trixie.  
 
-I have already installed Linux on a virtual machine and hashcat, documentation can be found at https://github.com/mirosec/cyber-security/blob/main/h1-cyber-science.md. So I'll be skipping straight to cracking the hash.
+I have already installed Linux on a virtual machine and hashcat, documentation can be found [here](https://github.com/mirosec/cyber-security/blob/main/h1-cyber-science.md). So I'll be skipping straight to cracking the hash.
 
 ---
 
