@@ -280,6 +280,8 @@ Wohoo! We got it this time! The password is ```butterfly```. Now that we have th
 
 This was a fun exercise and I'll return to create some encrypted files myself to try different cracking methods. 
 
+---
+
 ### Later update on shared clipoard
 
 Having to type everything manually between my host PC and the VM is very inefficient and prone to typos. To get the shared clipboard working bidirectionally between host PC and VM I had to install Guest Additions on the VM. First I needed to add VBoxGuestAdditions.iso to the virtual optical drive in VirtualBox Manager. 
