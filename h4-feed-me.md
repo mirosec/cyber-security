@@ -8,6 +8,8 @@ This is the fourth assignment for the course - https://terokarvinen.com/cyber-se
 
 I have installed and documented FeedFlow in my earlier assignment h2: https://github.com/mirosec/cyber-security/blob/main/h2-cyber-security-scene.md
 
+---
+
 ### x) Why install a feed reader?
 
 The main advantage a feed reader offers is simplicity: you only get the news from sources you selected and nothing else. There are no ads or recommended articles, it's just pure, distilled
@@ -16,6 +18,8 @@ news content for you to read in the order it was published. You have complete co
 
 <img width="1000" height="650" alt="image" src="https://github.com/user-attachments/assets/7545f504-f19d-46f0-90b0-af54cd50effa" />
 
+
+---
 
 ### b, c, d) Adding more cyber security feeds
 
@@ -153,6 +157,7 @@ $ sudo apt install apache2
 
 <img width="700" height="250" alt="image" src="https://github.com/user-attachments/assets/cd2157ad-e53f-4621-88b5-3946cde27b84" />
 
+---
 
 ### Checking the logs - g) Voluntary bonus, a bit hard: Identify a port scan against Apache on the host being scanned, e.g. in logs. Perform the test against "localhost" address and disconnect the internet while port scanning.
 
@@ -189,6 +194,7 @@ Now for the logs ```$ sudo cat /var/log/apache2./access.log```, we can literally
 
 <img width="730" height="362" alt="image" src="https://github.com/user-attachments/assets/a10e9324-d528-40cd-8152-8bc5ffadb148" />
 
+---
 
 ### Avoiding detection - h) Voluntary bonus, a bit hard: Modify nmap scan so that it cannot be detected by the method you found above.
 
@@ -220,6 +226,7 @@ Just when I thought it worked, you can still see **/nmaplowercheck** in the log.
 
 <img width="1773" height="582" alt="image" src="https://github.com/user-attachments/assets/2514c6e1-c28e-45c8-8865-62cb527e2e9d" />
 
+---
 
 ### Later update 19.11.2026 - TCP SYN (Stealth) Scan - https://nmap.org/book/synscan.html 
 
@@ -231,6 +238,8 @@ Of course the the actual solution to this was super simple: we need to use a ste
 Now let's check the logs and we can see there isn't even a single new event in it. Only the entries from the earlier test.
 
 <img width="1624" height="733" alt="image" src="https://github.com/user-attachments/assets/6b41af9f-45c5-4a8a-b0be-14ba06a53552" />
+
+---
 
 ### Later update 19.11.2026 - TCP Connect Scan (-sT) - https://nmap.org/book/scan-methods-connect-scan.html
 
