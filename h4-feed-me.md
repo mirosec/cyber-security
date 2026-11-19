@@ -142,9 +142,10 @@ When testing these with nmap they will still show as open to the local network. 
 
 Let's start with installing apache2 web server. This allows us to host websites on the virtual machine and it should open port 80 for http traffic.
 
-> $ sudo apt update
-> 
-> $ sudo apt install apache2
+```
+sudo apt update
+sudo apt install apache2
+```
 
 
 <img width="700" height="250" alt="image" src="https://github.com/user-attachments/assets/cd2157ad-e53f-4621-88b5-3946cde27b84" />
@@ -204,8 +205,9 @@ I did have to ask the AI for further help with syntax (decoy was especially tric
 
 The logs looked hopeful at the start, but the nmap showed up again. The command didn't work. I asked the AI again for _how do I scan for apache using nmap without showing up in access logs_ and made this command: 
 
-**$ nmap -p 80 -sV --script=http-title --script-args http.useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" localhost"**. 
-
+```
+$ nmap -p 80 -sV --script=http-title --script-args http.useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" localhost". 
+```
 
 <img width="652" height="304" alt="image" src="https://github.com/user-attachments/assets/8e19cd0c-5d9e-4bc5-b7a9-8f8064e67399" />
 
@@ -215,3 +217,29 @@ Just when I thought it worked, you can still see **/nmaplowercheck** in the log.
 
 <img width="1773" height="582" alt="image" src="https://github.com/user-attachments/assets/2514c6e1-c28e-45c8-8865-62cb527e2e9d" />
 
+
+### Later update 19.11.2026 - TCP SYN (Stealth) Scan - https://nmap.org/book/synscan.html 
+
+Of course the the actual solution to this was super simple: we need to use a stealth scan with the modifier -sS. I foolishly skipped the part about this in nmap book because it seemed too complicated at a glance, and ironically it turned out to be the complete opposite. It was the easiest and simplest solution. It bypasses detection by never fully completing TCP connections. 
+
+
+<img width="1630" height="883" alt="image" src="https://github.com/user-attachments/assets/eec2638b-13f5-4706-aa28-14bac6266730" />
+
+Now let's check the logs and we can see there isn't even a single new event in it. Only the entries from the earlier test.
+
+<img width="1624" height="733" alt="image" src="https://github.com/user-attachments/assets/6b41af9f-45c5-4a8a-b0be-14ba06a53552" />
+
+### Later update 19.11.2026 - TCP Connect Scan (-sT) - https://nmap.org/book/scan-methods-connect-scan.html
+
+While researching scan types I came across a connect scan which can be used without root privileges, so no sudo required in front of command this time. It can also be used to scan IPv6 networks. 
+
+
+<img width="1612" height="565" alt="image" src="https://github.com/user-attachments/assets/1f028ff8-4d78-4b8f-b6f1-cd63ba376ddf" />
+
+
+Lets take a look at the logs:
+
+<img width="1630" height="726" alt="image" src="https://github.com/user-attachments/assets/7cc0676e-bd06-4a23-90fc-698e875befb4" />
+
+
+The scan was successful! No detection in access logs.
