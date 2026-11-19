@@ -30,7 +30,8 @@ This article is a systematic literature review, which is a synthesis of availabl
 
 ---
 
-### b) Reviewing the review
+### b) Reviewing the review - Read the article and create a brief summary around these questions.
+
 #### Key areas being researched (research questions)
 - What are the latest technologies in current threat modeling methodologies?
 - What features are required to apply threat modeling in the defense industry?
@@ -51,6 +52,7 @@ I used Gemini AI to explain terms mission-based, TTP and DIEFD (Data, Informatio
 ---
 
 ### c) Threat modeling quickrun. Create two risks and decide what to do with them. Imagine the details. Be brief, but specific.
+
 #### Company 
 - Janko's Concrete
 
@@ -75,7 +77,7 @@ I used Gemini AI to explain terms mission-based, TTP and DIEFD (Data, Informatio
 
 - Employees will be trained to spot phishing attempts to **mitigate** further breaches.
 
-### d) Bonus - Create email alert for new research articles
+### d) Bonus - Create an alert that emails you interesting articles. Good for your future thesis. Start with a wide net, then reduce it after a couple of days; and reduce it more after a week.
 There was a surprising lack of threat modeling review articles, so I created an alert for "threat modeling:review article" by clicking Create alert in Google Scholar's bottom of the left side panel. 
 
 **Later update:** Be careful! After creating the email alert I soon started receiving suspicious spam mail from dubious updates@academia-mail.com telling me to Please save this PDF. The spam mail was very vague "here is an article on network security, please open and save it immediately". 
@@ -113,7 +115,8 @@ I'll try to be as detailed as possible within reason, so that someone with littl
 ---
 
 ### f) Voluntary technical puzzle, without the use of AI
-#### ==gCh8mclRFIs8GbsVGS
+
+The puzzle: ```==gCh8mclRFIs8GbsVGS```
 
 I am guessing this is a hash of a password or maybe a strong password based on my knowledge, but let's pretend I haven no idea what the puzzle could be.  
 
