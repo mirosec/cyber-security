@@ -277,3 +277,13 @@ Wohoo! We got it this time! The password is ```butterfly```. Now that we have th
 
 
 This was a fun exercise and I'll return to create some encrypted files myself to try different cracking methods. 
+
+### Later update on shared clipoard
+
+Having to type everything manually between my host PC and the VM is very inefficient and prone to typos. To get the shared clipboard working bidirectionally between host PC and VM I had to install Guest Additions on the VM. First I needed to add VBoxGuestAdditions.iso to the virtual optical drive in VirtualBox Manager. 
+
+This can be done in Oracle Virtualbox Manager -> Settings -> Storage -> Controller:IDE -> Add Optical Drive icon -> double click VBoxGuestAdditions.iso.
+
+I followed the guide on https://share.google/aimode/lAOjcqblXFt6pRwOB to mount the CD in linux, but left out the first part with the Install Build Prerequisites.
+
+<img width="1501" height="442" alt="image" src="https://github.com/user-attachments/assets/ef643547-c482-4aa3-ba3b-1577e3f2f35b" />
