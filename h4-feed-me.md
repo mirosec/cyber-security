@@ -143,8 +143,8 @@ When testing these with nmap they will still show as open to the local network. 
 Let's start with installing apache2 web server. This allows us to host websites on the virtual machine and it should open port 80 for http traffic.
 
 ```
-sudo apt update
-sudo apt install apache2
+$ sudo apt update
+$ sudo apt install apache2
 ```
 
 
@@ -153,7 +153,7 @@ sudo apt install apache2
 
 ### Checking the logs
 
-Now we need to check the logs for apache2 to see what the port scanning looks like. After a quick googling to refresh my memory logs are found in /var/log/apache2/, there's an error.log and access.log. I ran **$ nmp localhost** and checked the access log with **$ sudo cat /var/log/apache2./access.log**. 
+Now we need to check the logs for apache2 to see what the port scanning looks like. After a quick googling to refresh my memory logs are found in ```/var/log/apache2/```, there's an ```error.log``` and ```access.log```. I ran ```$ nmp localhost``` and checked the access log with ```$ sudo cat /var/log/apache2./access.log```
 
 The log was empty, the port scan was not showing on it. I made sure apache2 was running:
 
@@ -169,19 +169,19 @@ I also checked with my browser, this did show up in the access logs.
 
 ### Running the scan
 
-Maybe the issue is that nmap isn't somehow scanning apache in a way that triggers the logs. I tried googling for how to see port scans in apache logs, but didn't find anything useful. Let's check the the help for nmap with **$ nmap --help**. The end of the output showed something interesting:
+Maybe the issue is that nmap isn't somehow scanning apache in a way that triggers the logs. I tried googling for how to see port scans in apache logs, but didn't find anything useful. Let's check the the help for nmap with ```$ nmap --help```. The end of the output showed something interesting:
 
 
 <img width="869" height="279" alt="image" src="https://github.com/user-attachments/assets/104fa294-c22b-428d-9601-986895e9f2cf" />
 
 
-let's try **$ nmap -v -A localhost** from the example list, this should run multiple types of scans. We can now clearly see apache2 and http mentioned.
+let's try ```$ nmap -v -A localhost``` from the example list, this should run multiple types of scans. We can now clearly see apache2 and http mentioned.
 
 
 <img width="700" height="389" alt="image" src="https://github.com/user-attachments/assets/9fa326ae-a42d-4209-b27b-bdac46e23bd6" />
 
 
-Now for the logs **$ sudo cat /var/log/apache2./access.log**, we can literally see nmap scripting engine written on the logs.
+Now for the logs ```$ sudo cat /var/log/apache2./access.log```, we can literally see nmap scripting engine written on the logs.
 
 
 <img width="730" height="362" alt="image" src="https://github.com/user-attachments/assets/a10e9324-d528-40cd-8152-8bc5ffadb148" />
@@ -197,7 +197,7 @@ Next we need to perform a scan without being detected in the logs. I don't reall
 >
 > -D <decoy1,decoy2,ME> (Decoy Scan). Nmap generates fake scans using spoofed source IP addresses alongside your real IP (ME). The target's logs show multiple machines scanning simultaneously, hiding the true scanner among the noise.
 
-I did have to ask the AI for further help with syntax (decoy was especially tricky) and ended up with **$ sudo nmap -A -T3 -f -D 192.168.1.10,192.168.1.25,ME localhost**. I had to add the -A since otherwise it wouldn't scan for apache2 specifically even though you could see port 80 open indicating a webserver.
+I did have to ask the AI for further help with syntax (decoy was especially tricky) and ended up with ```$ sudo nmap -A -T3 -f -D 192.168.1.10,192.168.1.25,ME localhost```. I had to add the -A since otherwise it wouldn't scan for apache2 specifically even though you could see port 80 open indicating a webserver.
 
 
 <img width="1630" height="201" alt="image" src="https://github.com/user-attachments/assets/7898dde8-e8f5-4c1c-b61e-9799fab96da5" />
