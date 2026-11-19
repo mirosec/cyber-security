@@ -4,7 +4,7 @@ This is the second assignment for the course - https://terokarvinen.com/cyber-se
 
 ---
 
-Read/watch/listen and summarize cyber security **a)** podcast and **b)** blog, **c)** Link a science article to either one. 
+### Read/watch/listen and summarize cyber security **a)** podcast and **b)** blog, **c)** Link a science article to either one.
 
 ### a) Darknet Diaries - Ricky - https://darknetdiaries.com/episode/181/
 
@@ -98,8 +98,7 @@ Instead of strictly defending against cyber threats especially against state age
 
 ---
 
-### **c) Science that.**
-Link some theory, model or article you read in h1 CyberScience to a blog post or podcast episode you found here. Can you put a fresh security event in the context of larger understanding?
+### **c) Science that.** Link some theory, model or article you read in h1 CyberScience to a blog post or podcast episode you found here. Can you put a fresh security event in the context of larger understanding?
 
 I chose a systematic literature review on how security affects e-banking adoption. 
 > Security as a determinant of e-banking adoption: a systematic literature review
@@ -115,9 +114,10 @@ As a personal story my own credit card was the target of a possible cyber attack
 ---
 
 ### d) & e) Download/Install debian on virtual machine
-Installation was done and documented in h1 assignment.
+Installation was done and documented in h1 assignment. https://github.com/mirosec/cyber-security/blob/main/h1-cyber-science.md
 
 ### **f) Voluntary bonus:** Install a feed reader and follow some RSS / Atom feeds. 
+
 > Google rss feed reader
 > 
 > Google AI overview listed several options
