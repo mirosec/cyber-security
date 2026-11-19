@@ -32,7 +32,9 @@ I have already installed Linux on a virtual machine and hashcat, documentation c
 
 #### Cracking the hash 6b1628b016dff46e6fa35684be6acc96
 
-I'll be following the guide at https://terokarvinen.com/2022/cracking-passwords-with-hashcat/. Unfortunately my shared clipboard between PC and VM linux stopped working even though the settings are correct, but I simply don't have enough time to solve the issue. I'll just have to copy the outputs by hand, but I'll have to skip the long ones.
+I'll be following Tero's [guide](https://terokarvinen.com/2022/cracking-passwords-with-hashcat/). Unfortunately my shared clipboard between PC and VM linux stopped working even though the settings are correct, but I simply don't have enough time to solve the issue. I'll just have to copy the outputs by hand, but I'll have to skip the long ones.
+
+**Update**: Fix for the shared clipboard can be found here [here](https://github.com/mirosec/cyber-security/edit/main/h3-cyber-lab.md#later-update-on-shared-clipoard)
 
 - hashcat is already installed so I just have to powerup my virtual machine and open terminal
  
