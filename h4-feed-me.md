@@ -37,7 +37,7 @@ This is a summary of a courtcase about port scanning a bank's network and its co
 - The court rejected A's plea on the basis of A being experienced in IT - A should have known port scanning to be illegal
 - A was sentenced to pay restitution based on the increased cyber security costs to the OPK bank
 
-What we can take away from this case is that **pleading to ignorance won't save you from being prosecuted**. You can't simply say that you didn't know what you were doing. It did seem a bit overkill to hit a 17 year-old with a 18 000€ fee, although the court did reduce this to little under 6 000€ in the end. I doubt the port scan caused much actual damage or require meaningful extra work from the bank. 
+What we can take away from this case is that **pleading ignorance won't save you from being prosecuted**. You can't simply say that you didn't know what you were doing. It did seem a bit overkill to hit a 17 year-old with a 18 000€ fee, although the court did reduce this to little under 6 000€ in the end. I doubt the port scan caused much actual damage or require meaningful extra work from the bank. 
 
 This was the first port scanning court case in Finland and A probably had to be made an example of to deter any future port scanners. These days I would definitely not suggest port scanning random addresses, you will very likely be caught and prosecuted.
 
