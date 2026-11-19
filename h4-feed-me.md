@@ -48,7 +48,8 @@ This was the first port scanning court case in Finland and A probably had to be 
 Test is done on Debian linux virtual machine I setup in earlier assignments. 
 
 First let's install **Network mapper** (nmap) the port scanning tool
-> $ sudo apt-get install nmap
+
+```$ sudo apt-get install nmap```
 
 Next we should disconnect our VM from the internet so there is not even an accidental chance that we port scan an innocent network and become a devious cyber criminal. We will test the internet connection by pinging Google nameservers (8.8.8.8)
 
@@ -102,8 +103,10 @@ We need to get access to Internet again, so time to plug the virtual cable back 
 
 ### Installing daemon
 
-> $ sudo apt-get install firewalld
-> $ sudo apt-get install ssh
+```
+$ sudo apt-get install firewalld
+$ sudo apt-get install ssh
+```
 
 Let's unplug the virtual cable again before we test nmapping localhost.
 
