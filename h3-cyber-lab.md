@@ -228,3 +228,52 @@ I googled the error, but it was hard to find anything useful. There was a part a
 
 But it gave the same exact error. I even tried installing zliblg (there was no zlib-gst) which was missing earlier, but it didn't help either. We hit a wall for now, maybe we'll come back later to try fix the error.
 
+---
+
+### Later update - Finding and installing the right package
+
+After trying to install multiple different packages and trying again with no success (libbz2, bzip2, libzzip-dev) I consulted my software developer friend, and got the advice to compile John again now that the packages were installed. To do that I had to remove the already compiled John. 
+
+I ran  ```$ make uninstall -s clean && make -sj1``` to remove and compile John again, but it didn't work at first. At this point I gave up after a long day and swore to return to fix this later.
+
+Few days later after extensive googling I found that I actually have to run the `.confgure` and `make install` part all over again after `make uninstall`. With a new boost of motivation I was determined to make it work this time. I read the instructions again and noticed this key line:
+
+*If you're missing any dependencies, you'll get a warning here. That's how I found out what packages to install beforehand with 'apt-get'.*
+
+Taking a new look at the dependencies after running ```$ ./configure```
+
+
+<img width="1689" height="766" alt="image" src="https://github.com/user-attachments/assets/17fa8bee-953e-4c43-b468-502a21a6fe37" />
+
+
+We can see the culprit libbz2, but there is no such package time to run apt install next and spam the trusty TAB button to see all the options
+
+
+<img width="1690" height="450" alt="image" src="https://github.com/user-attachments/assets/824919be-4161-408e-8c3d-53529a9794fd" />
+
+
+I already have libbz2-1.0 installed so that package was not the right one. The dev package was missing however, let's try install it!
+
+
+<img width="1653" height="679" alt="image" src="https://github.com/user-attachments/assets/df760c5c-d039-4973-a3c0-67c570cae6f7" />
+
+
+Now ```$ ./configure``` again and we can see the libbz2 dependency being filled this time
+
+
+<img width="1687" height="136" alt="image" src="https://github.com/user-attachments/assets/ded3b88e-0389-4004-bcab-d28be7cb5571" />
+
+
+Next I ran ```$ make -s clean && make -sj4``` again to compile John once more and followed the instructions of the assignment up to where I got stuck in the first place and...
+
+
+<img width="1686" height="727" alt="image" src="https://github.com/user-attachments/assets/1bbd2b5c-4ca3-4531-806d-a544726ab0c1" />
+
+
+Wohoo! We got it this time! The password is ```butterfly```. Now that we have they key, it's time to open the treasure
+
+
+<img width="1663" height="682" alt="image" src="https://github.com/user-attachments/assets/ce5f8a50-dd63-4a62-baa5-39193510b0b7" />
+
+
+This was a fun exercise and I'll return to create some encrypted files myself to try different cracking methods. 
