@@ -3,6 +3,7 @@
 Course for LITEM Degree Programme in Business Technologies (master's level)
 
 https://terokarvinen.com/cyber-security/
+
 ---
 
 ### Introduction
