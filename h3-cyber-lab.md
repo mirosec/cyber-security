@@ -143,7 +143,7 @@ Seems git wasn't installed with the first command. Let's install it.
   ```
   $ sudo apt-get install git
 
-  choose y for disk usage
+  choose y for disk usage            # there is a prompt to choose yes or no, you pick one then press enter
 
   $ git clone --depth=1 https://github.com/openwall/john.git
 
