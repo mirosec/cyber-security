@@ -62,13 +62,9 @@ We now have rockyou.txt ready to use in dictionary attacks. we can use head comm
 $ head rockyou.txt
  
  123456
- 
  12345
-
  123456789
-
  password
-
  iloveyou
 ```
  
@@ -147,7 +143,7 @@ Seems git wasn't installed with the first command. Let's install it.
   ```
   $ sudo apt-get install git
 
- $ choose y for disk usage
+  choose y for disk usage
 
   $ git clone --depth=1 https://github.com/openwall/john.git
 
@@ -155,7 +151,7 @@ Seems git wasn't installed with the first command. Let's install it.
 
   $ ./configure
 
-  $ configure: error: no acceptable C compiler found in $PATH
+  configure: error: no acceptable C compiler found in $PATH
 ```
 
 Quick google and we need to install a C compiler
@@ -185,7 +181,7 @@ Assignment says type -sj4 but terminal says -sj1. The assignment is for an older
 It started compiling, let's wait for a few minutes and see what happens.
 
   ```
-$ make process completed.
+ make process completed.
 
   $ cd ../run/
 
