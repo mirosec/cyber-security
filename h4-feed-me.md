@@ -43,9 +43,9 @@ This was the first port scanning court case in Finland and A probably had to be 
 
 ---
 
-### f) Test environment: Port scanning 
+### f) Port scanning - How can criminals know what services your employer has? Disconnect your computer from the internet while doing the test (after you have installed the required software). Do the test inside your virtual machine. 
 
-Test is done on Debian linux virtual machine I setup in earlier assignments. 
+Test is done on Debian linux virtual machine I [setup](https://github.com/mirosec/cyber-security/edit/main/h3-cyber-lab.md#later-update-on-shared-clipoard) in earlier assignments. 
 
 First let's install **Network mapper** (nmap) the port scanning tool
 
@@ -154,7 +154,7 @@ $ sudo apt install apache2
 <img width="700" height="250" alt="image" src="https://github.com/user-attachments/assets/cd2157ad-e53f-4621-88b5-3946cde27b84" />
 
 
-### Checking the logs
+### Checking the logs - g) Voluntary bonus, a bit hard: Identify a port scan against Apache on the host being scanned, e.g. in logs. Perform the test against "localhost" address and disconnect the internet while port scanning.
 
 Now we need to check the logs for apache2 to see what the port scanning looks like. After a quick googling to refresh my memory logs are found in ```/var/log/apache2/```, there's an ```error.log``` and ```access.log```. I ran ```$ nmp localhost``` and checked the access log with ```$ sudo cat /var/log/apache2./access.log```
 
@@ -170,7 +170,7 @@ I also checked with my browser, this did show up in the access logs.
 <img width="981" height="226" alt="image" src="https://github.com/user-attachments/assets/f593dcd8-1283-40fe-bab6-2a27efd9626f" />
 
 
-### Running the scan
+### Running the scan 
 
 Maybe the issue is that nmap isn't somehow scanning apache in a way that triggers the logs. I tried googling for how to see port scans in apache logs, but didn't find anything useful. Let's check the the help for nmap with ```$ nmap --help```. The end of the output showed something interesting:
 
@@ -190,7 +190,7 @@ Now for the logs ```$ sudo cat /var/log/apache2./access.log```, we can literally
 <img width="730" height="362" alt="image" src="https://github.com/user-attachments/assets/a10e9324-d528-40cd-8152-8bc5ffadb148" />
 
 
-### Avoiding detection
+### Avoiding detection - h) Voluntary bonus, a bit hard: Modify nmap scan so that it cannot be detected by the method you found above.
 
 Next we need to perform a scan without being detected in the logs. I don't really have a clear idea on where to take this, so I'll google for common methods to avoid detection when port scanning with nmap. I looked through the list of nmap command modifiers the AI overview gave me and picked a few that would be good to try. These were the first options in the categories **Timing and rate, packet fragmentation and Source masking and spoofing**. 
 
