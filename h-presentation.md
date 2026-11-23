@@ -1,4 +1,6 @@
-### Case eMudhra - failure in key management
+## Topic: Encryption and key management
+
+### Case eMudhra - Failure in key management
 
 [Case eMudhra - failure in key managament.pdf](https://github.com/user-attachments/files/34690933/Case.eMudhra.-.failure.in.key.managament.pdf)
 
