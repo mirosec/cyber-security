@@ -4,9 +4,8 @@ This is the fifth assignment for the course - https://terokarvinen.com/cyber-sec
 
 ---
 
-### x) Read and summarize (with some bullet points; check tips for free access)
+### x) Read and summarize select chapters Schneier 2015: Applied Cryptography (with some bullet points)
 
-**Schneier 2015: Applied Cryptography:**
 
 **Chapter 1 - Foundations - 1.1 Terminology - Sender and Receiver, Messages and Encryption, Algorithms and Keys, Symmetric Algorithms, Public-Key Algorithms**
 
