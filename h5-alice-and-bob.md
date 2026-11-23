@@ -6,12 +6,17 @@ This is the fifth assignment for the course - https://terokarvinen.com/cyber-sec
 
 ### x) Read and summarize select chapters Schneier 2015: Applied Cryptography (with some bullet points)
 
+Source used: https://www.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/
+
 
 **Chapter 1 - Foundations - 1.1 Terminology - Sender and Receiver, Messages and Encryption, Algorithms and Keys, Symmetric Algorithms, Public-Key Algorithms**
 
--
--
--
+- Sender & receiver - text needs to be transferred without anyone eavesdropping and reading the private text
+- Privacy can be achieved through encryption: disguising a message to hide it's content is encryption, removing the disguise is decryption
+  <img width="782" height="155" alt="image" src="https://github.com/user-attachments/assets/973aa3f8-40eb-492e-a11c-818c7b175bb4" />
+- Cryptography is the art and science of keeping messages secure
+- Cryptanalysis on the other hand is the art of breaking this security
+- Both of these are based ultimately on theoretical mathematics
 
               
 **Chapter 2 - Protocol Building Blocks, sections - 2.5 Communications Using Public-Key Cryptography**
