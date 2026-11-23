@@ -1,4 +1,4 @@
-# h1 CyberScience
+# h1 CyberScience - Threat modeling
 
 This is the first assignment for the course - https://terokarvinen.com/cyber-security/
 
