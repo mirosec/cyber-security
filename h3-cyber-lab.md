@@ -1,4 +1,4 @@
-# h3 Cyber lab
+# h3 Cyber lab - Test environment for cyber security
 
 This is the third assignment for the course - https://terokarvinen.com/cyber-security/
 
