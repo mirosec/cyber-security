@@ -12,8 +12,10 @@ Source used: https://www.oreilly.com/library/view/applied-cryptography-protocols
 **Chapter 1 - Foundations - 1.1 Terminology - Sender and Receiver, Messages and Encryption, Algorithms and Keys, Symmetric Algorithms, Public-Key Algorithms**
 
 - Sender & receiver - text needs to be transferred without anyone eavesdropping and reading the private text
-- Privacy can be achieved through encryption: disguising a message to hide it's content is encryption, removing the disguise is decryption
+- Privacy can be achieved through encryption: disguising a message to hide it's content is encryption, removing the disguise is decryption. Image below from source:
+  
   <img width="782" height="155" alt="image" src="https://github.com/user-attachments/assets/973aa3f8-40eb-492e-a11c-818c7b175bb4" />
+
 - Cryptography is the art and science of keeping messages secure
 - Cryptanalysis on the other hand is the art of breaking this security
 - Both of these are based ultimately on theoretical mathematics
@@ -21,8 +23,10 @@ Source used: https://www.oreilly.com/library/view/applied-cryptography-protocols
               
 **Chapter 2 - Protocol Building Blocks, sections - 2.5 Communications Using Public-Key Cryptography**
 
--
--
+- In addition to confidentiality, Cryptography provides:
+  - **Authentication** - Making sure the receiver is the right person, attacker shouldn't be able to impersonate
+  - **Integrity** - Verifying the content of the message is not modified 
+  - **Nonrepudiation** - Sender should not be able to falsely deny sending the message
 -
 
 **Karvinen 2023: PGP - Send Encrypted and Signed Message - gpg**
