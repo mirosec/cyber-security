@@ -1,4 +1,4 @@
-# h2) Cyber security scene
+# h2) Overview of the current cyber security scene
 
 This is the second assignment for the course - https://terokarvinen.com/cyber-security/
 
