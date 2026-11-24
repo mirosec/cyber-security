@@ -27,7 +27,13 @@ Source used: https://www.oreilly.com/library/view/applied-cryptography-protocols
   - **Authentication** - Making sure the receiver is the right person, attacker shouldn't be able to impersonate
   - **Integrity** - Verifying the content of the message is not modified 
   - **Nonrepudiation** - Sender should not be able to falsely deny sending the message
--
+- Encryption is done using cryptographic algorithms (ciphers)
+- Restricted algorithms require the type of algorithm to be kept secret and were used in the past
+- Modern cryptography solves this problem with keys, such as with Public Key cryptography:
+
+<img width="782" height="561" alt="image" src="https://github.com/user-attachments/assets/6bffc379-c36f-42ce-b4d7-daedc66e2cfd" />
+
+
 
 **Karvinen 2023: PGP - Send Encrypted and Signed Message - gpg**
 
