@@ -6,6 +6,8 @@
 
 PKI basics – eMudhra Incident - Response - Mitigation
 
+Time limit: 15min
+
 ### Course
 
 Cyber Security - ICB705AS3YE-2
