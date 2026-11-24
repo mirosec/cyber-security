@@ -12,7 +12,9 @@ Source used in all parts of this task:
 
 https://www.oreilly.com/library/view/applied-cryptography-protocols/9781119096726/
 
-#### **Chapter 1 - Foundations - 1.1 Terminology - Sender and Receiver, Messages and Encryption, Algorithms and Keys, Symmetric Algorithms, Public-Key Algorithms**
+---
+
+#### 1) **Chapter 1 - Foundations - 1.1 Terminology - Sender and Receiver, Messages and Encryption, Algorithms and Keys, Symmetric Algorithms, Public-Key Algorithms**
 
 - Sender & receiver - text needs to be transferred without anyone eavesdropping and reading the private text
 - Privacy can be achieved through encryption: disguising a message to hide it's content is encryption, removing the disguise is decryption. Image below from source:
@@ -36,8 +38,9 @@ https://www.oreilly.com/library/view/applied-cryptography-protocols/978111909672
 
 - Symmetric key encryption (1.2) is based on a single key (i.e. password) shared between users, any user with this key can encrypt and decrypt, so losing this key compromises the encryption
 
+---
 
-#### **Chapter 2 - Protocol Building Blocks, sections - 2.5 Communications Using Public-Key Cryptography**
+#### 2) **Chapter 2 - Protocol Building Blocks, sections - 2.5 Communications Using Public-Key Cryptography**
 
 _A protocol is a series of steps, involving two or more parties, designed to accomplish a task_
 
@@ -49,8 +52,9 @@ Example from the book:
 >- (3) Alice encrypts her message using Bob's public key and sends it to Bob.
 >- (4) Bob decrypts Alice's message using his private key.
 
+---
 
-#### **Karvinen 2023: PGP - Send Encrypted and Signed Message - gpg**
+#### 3) **Karvinen 2023: PGP - Send Encrypted and Signed Message - gpg**
 
 https://terokarvinen.com/2023/pgp-encrypt-sign-verify/
 
@@ -65,6 +69,7 @@ The article instructs how to use GPG (GNU Privacy Guard) to encrypt/decrypt sent
 
 Now that public keys have been exchange and trust has been established, Alice and Bob can send encrypted messages to each other and decrypt them after receiving 
 
+---
 
 ### a) Pubkey today. Explain how you have used public key cryptography today or yesterday, outside of this homework. In addition to naming the system, identify how different parties use keys in different steps of the system. (Answering this question likely requries finding sources on your own. This subtask does not require tests with a computer.)
 
