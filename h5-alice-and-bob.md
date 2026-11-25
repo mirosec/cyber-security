@@ -73,7 +73,11 @@ Now that public keys have been exchange and trust has been established, Alice an
 
 ### a) Pubkey today. Explain how you have used public key cryptography today or yesterday, outside of this homework. In addition to naming the system, identify how different parties use keys in different steps of the system. (Answering this question likely requires finding sources on your own. This subtask does not require tests with a computer.)
 
+My [presentation](https://github.com/mirosec/cyber-security/blob/main/h-presentation.md) was on the topic of Public Key Infrastructure (PKI), which is something we use pretty much every day whenever we use the internet. When we access a website with an SSL certificate via https, we receive the public key linked to that certificate so we can encrypt the data we send to a website. The certificate owner then uses their private key to decrypt the data you send to them. 
 
+However, we still need to make sure that this certificate is actually been given to the correct organization, which is where the chain of trust is used. At the very core of the chain of trust, we have the root CA's (certificate authority) which are rigorously validated and audited by major browser and OS vendors (Microsoft, Google, Apple etc.). These root CA's then validate intermediate CA's by signing their certificates and verifying their identity. 
+
+Finally the branch intermediate CA does the same thing to the leaf certificate issued to a website, and makes sure the organization requesting the certificate also controls the actual website domain. Your browser has a built-in trust stores, which lists trusted root and intermediate CA's to make sure the chain of trust is valid all the way to the end. 
 
 ### b) Encrypt and decrypt a message. Explain how different parties use different keys at different stages of operation. Evaluate the security of the tool you've chosen.
 
