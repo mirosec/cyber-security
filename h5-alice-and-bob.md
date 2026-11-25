@@ -19,7 +19,7 @@ https://www.oreilly.com/library/view/applied-cryptography-protocols/978111909672
 - Sender & receiver - text needs to be transferred without anyone eavesdropping and reading the private text
 - Privacy can be achieved through encryption: disguising a message to hide it's content is encryption, removing the disguise is decryption. Image below from source:
   
-  <img width="582" height="155" alt="image" src="https://github.com/user-attachments/assets/973aa3f8-40eb-492e-a11c-818c7b175bb4" />
+  <img width="582" height="115" alt="image" src="https://github.com/user-attachments/assets/973aa3f8-40eb-492e-a11c-818c7b175bb4" />
 
 - Cryptography is the art and science of keeping messages secure
 - Cryptanalysis on the other hand is the art of breaking this security
@@ -34,7 +34,7 @@ https://www.oreilly.com/library/view/applied-cryptography-protocols/978111909672
 - Restricted algorithms require the type of algorithm to be kept secret and were used in the past
 - Modern cryptography solves this problem with keys, such as with Public Key cryptography:
 
-<img width="582" height="361" alt="image" src="https://github.com/user-attachments/assets/6bffc379-c36f-42ce-b4d7-daedc66e2cfd" />
+<img width="582" height="321" alt="image" src="https://github.com/user-attachments/assets/6bffc379-c36f-42ce-b4d7-daedc66e2cfd" />
 
 - Symmetric key encryption (1.2) is based on a single key (i.e. password) shared between users, any user with this key can encrypt and decrypt, so losing this key compromises the encryption
 
@@ -79,13 +79,36 @@ However, we still need to make sure that this certificate is actually been given
 
 Finally the branch intermediate CA does the same thing to the leaf certificate issued to a website, and makes sure the organization requesting the certificate also controls the actual website domain. Your browser has a built-in trust stores, which lists trusted root and intermediate CA's to make sure the chain of trust is valid all the way to the end. 
 
+---
+
 ### b) Encrypt and decrypt a message. Explain how different parties use different keys at different stages of operation. Evaluate the security of the tool you've chosen.
+
+TBD
+
+---
 
 ### c) Password management. Demonstrate use of a password manager. What kind of attacks take advantage of people not using password managers? (You can use any password manager, some examples include pass and KeePassXC.)
 
+For this demonstration I'll use [KeePassXC](https://keepassxc.org/). It's an open source and free software with no ads, local instead of cloud, just the way we like it. I clicked download and also installed Firefox browser plugin like suggested.
+
+Installation was super easy, just use default settings on all and click next. I also enabled automatic update checks, when it prompted after installation and running KeePassXC. We can't take screenshots by default, so we'll have to enable it first for this demo (View -> Allow screen capture). Otherwise the window will be hidden every time you try to screenshot.
+
+
+<img width="794" height="640" alt="image" src="https://github.com/user-attachments/assets/3431ab67-cb39-45df-b60a-05b81c977d51" />
+
+We'll be using the official [guide to get started](https://keepassxc.org/docs/KeePassXC_GettingStarted#_creating_your_first_database). 
+
+---
+
 ### d) Voluntary: Details of PGP. Send an encrypted and signed message using PGP, then verify and decrypt it. (You can use folders to simulate users, or use two computers or two different OS users. Don't use Tero as a name of any party, unless that's your given name. Many tools automate the use of PGP, my article allows you to do each step by hand.)
 
+TBD
+
+---
+
 ### e) Voluntary, challenging, requires coding: Cryptopals: Challenge Set 1:
+
+TBD
 
     1 Convert hex to base64 (feel free to use a library for base64)
     2 Fixed XOR
