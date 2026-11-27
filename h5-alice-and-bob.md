@@ -89,6 +89,8 @@ TBD
 
 ### c) Password management. Demonstrate use of a password manager. What kind of attacks take advantage of people not using password managers? (You can use any password manager, some examples include pass and KeePassXC.)
 
+#### Setting up a password manager - KeePassXC
+
 For this demonstration I'll use [KeePassXC](https://keepassxc.org/). It's an open source and free software with no ads, local instead of cloud, just the way we like it. I clicked download and also installed Firefox browser plugin like suggested.
 
 Installation was super easy, just use default settings on all and click next. I also enabled automatic update checks, when it prompted after installation and running KeePassXC. We can't take screenshots by default, so we'll have to enable it first for this demo (View -> Allow screen capture). Otherwise the window will be hidden every time you try to screenshot.
@@ -99,11 +101,13 @@ We'll be using the official [guide to get started](https://keepassxc.org/docs/Ke
 
 I won't post a screenshot of every phase, since I just used default settings and generated a strong password with the default settings. After creating a new database, it's time to add some New Entries and store passwords. 
 
+#### Browser integration
+
 Nobody wants to spend time adding passwords and site information one by one to KeePassXC as new entries, so we will instead [export](https://support.mozilla.org/en-US/kb/export-login-data-firefox) all our login credentials from Firefox into a .csv file and import that tile into KeePassXC. But before you do that you should keep in mind that...
 
 <img width="558" height="72" alt="image" src="https://github.com/user-attachments/assets/f2ffe456-aba1-4784-b9ea-152c9c362ce1" />
 
-Having all your passwords and login credentials in plain text on your computer is a bit scary. Even if you delete your .csv file right after someone could theoretically recover your deleted files from your drive. You could store the .csv file in a encrypted folder or drive, like with [VeraCrypt](https://youtu.be/ntnTzaUHd4M?t=220). I'll have to omit that from this demo however, since the scope of this task will start to get out of hand. 
+Having all your passwords and login credentials in plain text on your computer is a bit scary. Even if you delete your .csv file right after someone could theoretically recover your deleted files from your drive. You could store the .csv file in a encrypted folder or drive, like with [VeraCrypt](https://youtu.be/ntnTzaUHd4M?t=220). **I'll have to omit encrypting a folder/volume from this demo however, since the scope of this task will start to get out of hand.**
 
 If I had Windows Pro edition on my PC I could just use the built-in folder encryption, but alas I have the home version so I can't do that. I'll have to research different methods to safely import the files from my browser later, so for now I'll just demonstrate KeePassXC with a single manually added entry. 
 
@@ -113,6 +117,9 @@ Now let's enable browser integration for firefox (previously I installed KeePass
 
 <img width="459" height="354" alt="image" src="https://github.com/user-attachments/assets/386169c0-9d63-41b6-87d1-7e76ab5e07ff" />
 
+
+#### Using KeePassXC to login
+
 Trying to log onto app.terokarvinen.com next, I clicked the KeePass icon in the username field that the firefox extension added... 
 
 <img width="468" height="286" alt="image" src="https://github.com/user-attachments/assets/358786f7-7f79-4854-85b1-da9febfef64a" />
@@ -121,18 +128,35 @@ Trying to log onto app.terokarvinen.com next, I clicked the KeePass icon in the 
 
 <img width="744" height="109" alt="image" src="https://github.com/user-attachments/assets/efc1d8ec-bbda-4dc5-9ac5-1f86c7c49f7e" />
 
+
+<img width="288" height="129" alt="image" src="https://github.com/user-attachments/assets/7299320d-f7fd-428d-b86f-c99017fcc6e0" />
+
+
 Now I could just simply use KeePassXC by always right-clicking and choosing **Copy username** and **Copy password** each time I want to log onto a site, but that is just too inefficient.
 
+I googled "keepassxc database not connected error windows firefox", but couldn't find anything useful. I also restarted my Firefox and KeePass, but nothing changed. I went back to the official [guide](https://keepassxc.org/docs/KeePassXC_GettingStarted#_browser_integration). It seems I need to configure the extension before it works, by clicking the KeePass Icon, however the icon is not automatically visible. 
 
+It was hidden in the top right corner of Firefox inside the extension icon:
 
+<img width="522" height="285" alt="image" src="https://github.com/user-attachments/assets/a9fc521a-d07d-4924-a5f9-f30b417eb885" />
 
+Now this looks exactly like what we're looking for
 
+<img width="676" height="237" alt="image" src="https://github.com/user-attachments/assets/9d67a778-94a0-4025-bcbb-a792e50d6a2c" />
 
+After giving the connection a name (keepass) when asked and clicking allow when asked, when firefox asked if KeePass could be used in the login screen: it works!
 
+<img width="482" height="251" alt="image" src="https://github.com/user-attachments/assets/a8106fd0-a6d0-44e3-ac69-a6a3b1fe40b7" />
 
+#### What kind of attacks do password managers protect from?
 
+A password manager is designed to help you protect yourself from the most common types of password based attacks, by making sure that your passwords fill the recommended requirements set for safe passwords. If we look at the [list](https://www.traficom.fi/en/everyday-information-security/longer-better-how-create-strong-password) for recommendations on passwords set by Traficom, we can quickly see how KeePass for example would help us meet this requirements.
 
+With a password manager you can:
+- Quickly and easily generate long and complex passwords to protect you from **brute-force attacks**
+- Generate unique strong passwords for each site to avoid **credential stuffing attacks**, in which attackers exploit using the same password for multiple sites
 
+Password managers do also offer protection against various other threats like phishing attacks by not allowing you to type passwords to fake URL's, but the main benefit is that a manager helps you manage your passwords by helping you avoid common security mistakes when using passwords.
 
 ---
 
