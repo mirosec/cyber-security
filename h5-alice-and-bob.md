@@ -101,6 +101,8 @@ We'll be using the official [guide to get started](https://keepassxc.org/docs/Ke
 
 I won't post a screenshot of every phase, since I just used default settings and generated a strong password with the default settings. After creating a new database, it's time to add some New Entries and store passwords. 
 
+---
+
 #### Browser integration
 
 Nobody wants to spend time adding passwords and site information one by one to KeePassXC as new entries, so we will instead [export](https://support.mozilla.org/en-US/kb/export-login-data-firefox) all our login credentials from Firefox into a .csv file and import that tile into KeePassXC. But before you do that you should keep in mind that...
@@ -117,19 +119,23 @@ Now let's enable browser integration for firefox (previously I installed KeePass
 
 <img width="459" height="354" alt="image" src="https://github.com/user-attachments/assets/386169c0-9d63-41b6-87d1-7e76ab5e07ff" />
 
+---
 
 #### Using KeePassXC to login
 
 Trying to log onto app.terokarvinen.com next, I clicked the KeePass icon in the username field that the firefox extension added... 
 
+
 <img width="468" height="286" alt="image" src="https://github.com/user-attachments/assets/358786f7-7f79-4854-85b1-da9febfef64a" />
+
 
 ...and I got hit with an error message
 
-<img width="744" height="109" alt="image" src="https://github.com/user-attachments/assets/efc1d8ec-bbda-4dc5-9ac5-1f86c7c49f7e" />
+
+<img width="444" height="69" alt="image" src="https://github.com/user-attachments/assets/efc1d8ec-bbda-4dc5-9ac5-1f86c7c49f7e" />
 
 
-<img width="288" height="129" alt="image" src="https://github.com/user-attachments/assets/7299320d-f7fd-428d-b86f-c99017fcc6e0" />
+<img width="188" height="69" alt="image" src="https://github.com/user-attachments/assets/7299320d-f7fd-428d-b86f-c99017fcc6e0" />
 
 
 Now I could just simply use KeePassXC by always right-clicking and choosing **Copy username** and **Copy password** each time I want to log onto a site, but that is just too inefficient.
@@ -138,15 +144,17 @@ I googled "keepassxc database not connected error windows firefox", but couldn't
 
 It was hidden in the top right corner of Firefox inside the extension icon:
 
-<img width="522" height="285" alt="image" src="https://github.com/user-attachments/assets/a9fc521a-d07d-4924-a5f9-f30b417eb885" />
+<img width="322" height="185" alt="image" src="https://github.com/user-attachments/assets/a9fc521a-d07d-4924-a5f9-f30b417eb885" />
 
 Now this looks exactly like what we're looking for
 
-<img width="676" height="237" alt="image" src="https://github.com/user-attachments/assets/9d67a778-94a0-4025-bcbb-a792e50d6a2c" />
+<img width="376" height="137" alt="image" src="https://github.com/user-attachments/assets/9d67a778-94a0-4025-bcbb-a792e50d6a2c" />
 
 After giving the connection a name (keepass) when asked and clicking allow when asked, when firefox asked if KeePass could be used in the login screen: it works!
 
 <img width="482" height="251" alt="image" src="https://github.com/user-attachments/assets/a8106fd0-a6d0-44e3-ac69-a6a3b1fe40b7" />
+
+---
 
 #### What kind of attacks do password managers protect from?
 
