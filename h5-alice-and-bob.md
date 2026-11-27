@@ -121,6 +121,8 @@ Trying to log onto app.terokarvinen.com next, I clicked the KeePass icon in the 
 
 <img width="744" height="109" alt="image" src="https://github.com/user-attachments/assets/efc1d8ec-bbda-4dc5-9ac5-1f86c7c49f7e" />
 
+Now I could just simply use KeePassXC by always right-clicking and choosing **Copy username** and **Copy password** each time I want to log onto a site, but that is just too inefficient.
+
 
 
 
