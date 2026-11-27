@@ -93,10 +93,44 @@ For this demonstration I'll use [KeePassXC](https://keepassxc.org/). It's an ope
 
 Installation was super easy, just use default settings on all and click next. I also enabled automatic update checks, when it prompted after installation and running KeePassXC. We can't take screenshots by default, so we'll have to enable it first for this demo (View -> Allow screen capture). Otherwise the window will be hidden every time you try to screenshot.
 
-
-<img width="794" height="640" alt="image" src="https://github.com/user-attachments/assets/3431ab67-cb39-45df-b60a-05b81c977d51" />
-
 We'll be using the official [guide to get started](https://keepassxc.org/docs/KeePassXC_GettingStarted#_creating_your_first_database). 
+
+<img width="494" height="340" alt="image" src="https://github.com/user-attachments/assets/3431ab67-cb39-45df-b60a-05b81c977d51" />
+
+I won't post a screenshot of every phase, since I just used default settings and generated a strong password with the default settings. After creating a new database, it's time to add some New Entries and store passwords. 
+
+Nobody wants to spend time adding passwords and site information one by one to KeePassXC as new entries, so we will instead [export](https://support.mozilla.org/en-US/kb/export-login-data-firefox) all our login credentials from Firefox into a .csv file and import that tile into KeePassXC. But before you do that you should keep in mind that...
+
+<img width="558" height="72" alt="image" src="https://github.com/user-attachments/assets/f2ffe456-aba1-4784-b9ea-152c9c362ce1" />
+
+Having all your passwords and login credentials in plain text on your computer is a bit scary. Even if you delete your .csv file right after someone could theoretically recover your deleted files from your drive. You could store the .csv file in a encrypted folder or drive, like with [VeraCrypt](https://youtu.be/ntnTzaUHd4M?t=220). I'll have to omit that from this demo however, since the scope of this task will start to get out of hand. 
+
+If I had Windows Pro edition on my PC I could just use the built-in folder encryption, but alas I have the home version so I can't do that. I'll have to research different methods to safely import the files from my browser later, so for now I'll just demonstrate KeePassXC with a single manually added entry. 
+
+<img width="461" height="354" alt="image" src="https://github.com/user-attachments/assets/2a23e839-67a0-42ec-a065-a6eea40ac6c9" />
+
+Now let's enable browser integration for firefox (previously I installed KeePassXC firefox extension)
+
+<img width="459" height="354" alt="image" src="https://github.com/user-attachments/assets/386169c0-9d63-41b6-87d1-7e76ab5e07ff" />
+
+Trying to log onto app.terokarvinen.com next, I clicked the KeePass icon in the username field that the firefox extension added... 
+
+<img width="468" height="286" alt="image" src="https://github.com/user-attachments/assets/358786f7-7f79-4854-85b1-da9febfef64a" />
+
+...and I got hit with an error message
+
+<img width="744" height="109" alt="image" src="https://github.com/user-attachments/assets/efc1d8ec-bbda-4dc5-9ac5-1f86c7c49f7e" />
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
